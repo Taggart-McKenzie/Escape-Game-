@@ -5,6 +5,8 @@
  */
 package escape.game;
 
+import byui.cit260.escapeGame.model.Player;
+
 /**
  *
  * @author mckenzietaggart
@@ -15,7 +17,18 @@ public class EscapeGame {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Player playerOne = new Player();
+        
+        playerOne.setName("Jon");
+        playerOne.setLocation("Hall");
+        playerOne.setCluesFound("Look in the stairway.");
+        playerOne.setHeathOfPlayer("9 lives remaining.");
+        
+        String playerInfo = playerOne.toString();
+        System.out.println(playerInfo);
+        
+        
+        
     }
     
 }
