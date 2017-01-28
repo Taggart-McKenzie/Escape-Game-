@@ -7,6 +7,7 @@ package escape.game;
 
 import byui.cit260.escapeGame.model.Item;
 import byui.cit260.escapeGame.model.Player;
+import byui.cit260.escapeGame.model.Problem;
 
 /**
  *
@@ -41,6 +42,16 @@ public class EscapeGame {
         String itemInfo = myItem.toString();
         System.out.println(itemInfo);
                 
+        //Problem class
+        Problem myProblem = new Problem();
+        
+        myProblem.setSolveCube(150);
+        myProblem.setSolveForX(5);
+        myProblem.setSolvePower(25);
+        myProblem.setSolveTriangle(10);
+        
+        String problemInfo = myProblem.toString();
+        System.out.println(problemInfo);
         
     }
     
