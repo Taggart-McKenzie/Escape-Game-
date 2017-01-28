@@ -6,6 +6,7 @@
 package escape.game;
 
 import byui.cit260.escapeGame.model.Clues;
+import byui.cit260.escapeGame.model.Game;
 import byui.cit260.escapeGame.model.Item;
 import byui.cit260.escapeGame.model.Location;
 import byui.cit260.escapeGame.model.Map;
@@ -86,6 +87,16 @@ public class EscapeGame {
         
         String cluesInfo = myClues.toString();
         System.out.println(cluesInfo);
+        
+        //Game class
+        Game myGame = new Game();
+        
+        myGame.setPlayer("Player One");
+        myGame.setNumberOfTurns(10);
+        
+        String gameInfo = myGame.toString();
+        System.out.println(gameInfo);
+        
         
         
     }
