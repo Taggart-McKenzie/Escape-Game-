@@ -5,6 +5,7 @@
  */
 package escape.game;
 
+import byui.cit260.escapeGame.model.Characters;
 import byui.cit260.escapeGame.model.Clues;
 import byui.cit260.escapeGame.model.Game;
 import byui.cit260.escapeGame.model.Item;
@@ -97,7 +98,14 @@ public class EscapeGame {
         String gameInfo = myGame.toString();
         System.out.println(gameInfo);
         
+        //Characters class
+        Characters myCharacters = new Characters();
         
+        myCharacters.setPrisoner("Cell mate");
+        myCharacters.setWarden("Warden Bob");
+        
+        String charactersInfo = myCharacters.toString();
+        System.out.println(charactersInfo);
         
     }
     
