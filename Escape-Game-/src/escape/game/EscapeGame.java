@@ -5,6 +5,7 @@
  */
 package escape.game;
 
+import byui.cit260.escapeGame.model.Item;
 import byui.cit260.escapeGame.model.Player;
 
 /**
@@ -17,6 +18,7 @@ public class EscapeGame {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Player class
         Player playerOne = new Player();
         
         playerOne.setName("Jon");
@@ -27,7 +29,18 @@ public class EscapeGame {
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
         
+        //Item class
+        Item myItem = new Item();
         
+        myItem.setBook("Bible");
+        myItem.setBowl("Metal Bowl");
+        myItem.setCoffin("Wooden Coffin");
+        myItem.setKeys("Jail Keys");
+        myItem.setStick("Long Stick");
+        
+        String itemInfo = myItem.toString();
+        System.out.println(itemInfo);
+                
         
     }
     
