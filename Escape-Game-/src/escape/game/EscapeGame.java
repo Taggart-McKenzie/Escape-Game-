@@ -7,6 +7,7 @@ package escape.game;
 
 import byui.cit260.escapeGame.model.Item;
 import byui.cit260.escapeGame.model.Location;
+import byui.cit260.escapeGame.model.Map;
 import byui.cit260.escapeGame.model.Player;
 import byui.cit260.escapeGame.model.Problem;
 
@@ -67,7 +68,15 @@ public class EscapeGame {
         String locationInfo = myLocation.toString();
         System.out.println(locationInfo);
         
+        //Map class
+        Map myMap = new Map();
         
+        myMap.setLocation("Cell");
+        myMap.setNumColumns(5);
+        myMap.setNumRows(5);
+        
+        String mapInfo = myMap.toString();
+        System.out.println(mapInfo);
     }
     
 }
