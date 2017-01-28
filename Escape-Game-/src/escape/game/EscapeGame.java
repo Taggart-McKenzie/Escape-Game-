@@ -6,6 +6,7 @@
 package escape.game;
 
 import byui.cit260.escapeGame.model.Item;
+import byui.cit260.escapeGame.model.Location;
 import byui.cit260.escapeGame.model.Player;
 import byui.cit260.escapeGame.model.Problem;
 
@@ -52,6 +53,20 @@ public class EscapeGame {
         
         String problemInfo = myProblem.toString();
         System.out.println(problemInfo);
+        
+        //Location class
+        Location myLocation = new Location();
+        
+        myLocation.setAttribute("What is an attribute?");
+        myLocation.setColumn(3);
+        myLocation.setRow(4);
+        myLocation.setDescription("Bathroom");
+        myLocation.setItem("Stick");
+        myLocation.setProblem(25);
+        
+        String locationInfo = myLocation.toString();
+        System.out.println(locationInfo);
+        
         
     }
     
