@@ -12,12 +12,12 @@ import java.util.Objects;
  *
  * @author samanthabrown
  */
-public class Clues implements Serializable{
+public class Clue implements Serializable{
     
     //class instace variables
     private String cluesFound;
 
-    public Clues() {
+    public Clue() {
     }
     
     
@@ -54,7 +54,7 @@ public class Clues implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Clues other = (Clues) obj;
+        final Clue other = (Clue) obj;
         if (!Objects.equals(this.cluesFound, other.cluesFound)) {
             return false;
         }

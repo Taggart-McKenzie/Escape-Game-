@@ -6,7 +6,7 @@
 package escape.game;
 
 import byui.cit260.escapeGame.model.Characters;
-import byui.cit260.escapeGame.model.Clues;
+import byui.cit260.escapeGame.model.Clue;
 import byui.cit260.escapeGame.model.Game;
 import byui.cit260.escapeGame.model.Item;
 import byui.cit260.escapeGame.model.Location;
@@ -82,7 +82,7 @@ public class EscapeGame {
         System.out.println(mapInfo);
         
         //Clues class
-        Clues myClues = new Clues();
+        Clue myClues = new Clue();
         
         myClues.setCluesFound("Ask for a clue.");
         
