@@ -13,18 +13,22 @@ public class GameEndControl {
     public String winGame(int health, int location, int player){
 
         if (health >= 1 && location == 25 && player == 1){
-            return "YOU WIN";}
-        else{
-            return "YOU LOSE";}
+            return "YOU WIN";
+        }
+        else {
+            return "YOU LOSE";
+        }
 
     }
 
     public String loseGame(int health, int location, int player){
 
         if (health < 1 || location != 25 || player != 1){
-            return"YOU LOSE";}
+            return"YOU LOSE";
+        }
         else if (health >= 1 && location == 25 && player == 1){
-            return "YOU WIN";}
+            return "YOU WIN";
+        }
 //we are not quite sure we are getting this red flag on line 30.
         return null;
     }

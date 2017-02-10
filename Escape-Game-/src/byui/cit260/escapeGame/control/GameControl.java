@@ -11,9 +11,10 @@ package byui.cit260.escapeGame.control;
  */
 public class GameControl {
     
-    public int goBack(int location){
-        return location;
-    }
+   public int goBack(int location){
+       int prevLocation = location--;
+       return prevLocation;
+   }
     
     public String viewMap(String map){
         return map;
@@ -24,7 +25,7 @@ public class GameControl {
     }
     
     public int viewHealth(int player){
-        int healthOfPlayer = 10;
+        int healthOfPlayer = 0;
         return healthOfPlayer;
     }
     

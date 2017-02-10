@@ -11,15 +11,21 @@ package byui.cit260.escapeGame.control;
  */
 public class MainControl {
     //Unsure how to code this with String and int.
-    public String saveGame(int player, int location, String item,
-            String clue, int healthOfPlayer){
-        return "player + location + item + clue + healthOfPlayer";      
-    }
-    public String newGame (String name){
+    public String saveGame(String name){
+        int player = 0;
+        int location = 0;
+        int healthOfPlayer = 0;
+        String clue = "";
+        String item = "";
+        name = "player + location + item + clue + healthOfPlayer";   
         return name;
     }
-    public String loadSavedGame(int player, int location, String item,
-            String clues, int healthOfPlayer){
+    public String newGame (String name){
+        name = "";
+        return name;
+    }
+    public String loadSavedGame(String name){
+        name = "";
         return "player + location + item + clue + healthOfPlayer";        
     }
     public String help(String helpControl){
