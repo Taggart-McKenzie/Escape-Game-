@@ -110,10 +110,6 @@ public class ActionControl {
        return volume;
    }
    
-   public double solvePower(){
-       
-       return ;
-   }
    public boolean quit(boolean answer){
         boolean location = true;
         boolean GameControl = false;
