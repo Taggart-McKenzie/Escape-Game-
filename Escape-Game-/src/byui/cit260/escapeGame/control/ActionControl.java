@@ -86,7 +86,34 @@ public class ActionControl {
           return x;
       }
       return x;
-   }    
+   } 
+   public double solveCube(){
+       double base = 0;
+       double height = 0;
+       double length = 0;
+       double volume = 0;
+       
+       	if(base<0 || base>10){
+            return -1;
+   }
+        else if(height<0 || height>10){
+		return -1;
+   }
+        else if(length<0 || length>10){
+		return -1;
+   }
+        else if((base >= 0 && base<11) && (height >=0 && height<11)
+                 && (length >=0 && length<11)){
+ 	volume = base*height*length;
+        return volume;
+   }
+       return volume;
+   }
+   
+   public double solvePower(){
+       
+       return ;
+   }
    public boolean quit(boolean answer){
         boolean location = true;
         boolean GameControl = false;
