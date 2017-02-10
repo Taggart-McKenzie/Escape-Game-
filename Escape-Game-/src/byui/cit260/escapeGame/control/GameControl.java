@@ -11,4 +11,32 @@ package byui.cit260.escapeGame.control;
  */
 public class GameControl {
     
+    public int goBack(int location){
+        return location;
+    }
+    
+    public String viewMap(String map){
+        return map;
+    } 
+    
+    public String viewItem(String item){
+        return item;
+    }
+    
+    public int viewHealth(int player){
+        int healthOfPlayer = 10;
+        return healthOfPlayer;
+    }
+    
+    public boolean quit(boolean answer){
+        boolean location = true;
+        boolean GameControl = false;
+        
+        if (answer==true){
+            return location;
+        }
+        else {
+            return GameControl;
+        }
+    }
 }

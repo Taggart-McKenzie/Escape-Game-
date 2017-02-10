@@ -30,7 +30,7 @@ public class EscapeGame {
         playerOne.setName("Jon");
         playerOne.setLocation("Hall");
         playerOne.setCluesFound("Look in the stairway.");
-        playerOne.setHeathOfPlayer("9 lives remaining.");
+        playerOne.setHealthOfPlayer("9 lives remaining.");
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);

@@ -18,7 +18,7 @@ public class Player implements Serializable{
     private String name;
     private String location;
     private String cluesFound;
-    private String heathOfPlayer;
+    private String healthOfPlayer;
 
     public Player() {
     }
@@ -49,12 +49,12 @@ public class Player implements Serializable{
         this.cluesFound = cluesFound;
     }
 
-    public String getHeathOfPlayer() {
-        return heathOfPlayer;
+    public String getHealthOfPlayer() {
+        return healthOfPlayer;
     }
 
-    public void setHeathOfPlayer(String heathOfPlayer) {
-        this.heathOfPlayer = heathOfPlayer;
+    public void setHealthOfPlayer(String healthOfPlayer) {
+        this.healthOfPlayer = healthOfPlayer;
     }
 
     @Override
@@ -63,13 +63,13 @@ public class Player implements Serializable{
         hash = 13 * hash + Objects.hashCode(this.name);
         hash = 13 * hash + Objects.hashCode(this.location);
         hash = 13 * hash + Objects.hashCode(this.cluesFound);
-        hash = 13 * hash + Objects.hashCode(this.heathOfPlayer);
+        hash = 13 * hash + Objects.hashCode(this.healthOfPlayer);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", location=" + location + ", cluesFound=" + cluesFound + ", heathOfPlayer=" + heathOfPlayer + '}';
+        return "Player{" + "name=" + name + ", location=" + location + ", cluesFound=" + cluesFound + ", heathOfPlayer=" + healthOfPlayer + '}';
     }
 
     
@@ -94,7 +94,7 @@ public class Player implements Serializable{
         if (!Objects.equals(this.cluesFound, other.cluesFound)) {
             return false;
         }
-        if (!Objects.equals(this.heathOfPlayer, other.heathOfPlayer)) {
+        if (!Objects.equals(this.healthOfPlayer, other.healthOfPlayer)) {
             return false;
         }
         return true;
