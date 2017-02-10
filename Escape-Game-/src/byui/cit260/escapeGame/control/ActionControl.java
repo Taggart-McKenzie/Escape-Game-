@@ -87,11 +87,7 @@ public class ActionControl {
       }
       return x;
    } 
-   public double solveCube(){
-       double base = 0;
-       double height = 0;
-       double length = 0;
-       double volume = 0;
+   public double solveCube(double base, double height, double length, double volume){
        
        	if(base<0 || base>10){
             return -1;
@@ -109,6 +105,17 @@ public class ActionControl {
    }
        return volume;
    }
+   public double solvePower(double x){
+       double power = 0;
+       
+       if(x<1 || x > 10){
+           return -1;
+       }
+       else{
+           power = x*x;
+           return power;
+       }
+   } 
    
    public boolean quit(boolean answer){
         boolean location = true;
