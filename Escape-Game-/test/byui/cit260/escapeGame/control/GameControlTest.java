@@ -29,7 +29,7 @@ public class GameControlTest {
         int result = instance.goBack(location);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -44,7 +44,7 @@ public class GameControlTest {
         String result = instance.viewMap(map);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      
     }
 
     /**
@@ -59,7 +59,7 @@ public class GameControlTest {
         String result = instance.viewItem(item);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -74,7 +74,7 @@ public class GameControlTest {
         int result = instance.viewHealth(player);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -89,7 +89,7 @@ public class GameControlTest {
         boolean result = instance.quit(answer);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      
     }
     
 }

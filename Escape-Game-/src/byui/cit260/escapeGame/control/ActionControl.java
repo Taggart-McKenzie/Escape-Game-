@@ -43,9 +43,8 @@ public class ActionControl {
        return item;
    }
    
-   public String useItem(int Item){
-       String clue;
-       clue = "Item";
+   public String useItem(String item){
+       String clue = item;
        return clue;
    }
    public double solveTriangle(double base, double height){
@@ -111,10 +110,11 @@ public class ActionControl {
        if(x<1 || x > 10){
            return -1;
        }
-       else{
+       else if (x>=1 && x<=10){
            power = x*x;
            return power;
        }
+       return power;
    } 
    
    public boolean quit(boolean answer){

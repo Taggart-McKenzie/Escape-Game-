@@ -27,11 +27,11 @@ public class GameEndControlTest {
         int location = 25;
         int player = 1;
         GameEndControl instance = new GameEndControl();
-        String expResult = "";
+        String expResult = "YOU WIN";
         String result = instance.winGame(health, location, player);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -44,11 +44,11 @@ public class GameEndControlTest {
         int location = 1;
         int player = 4;
         GameEndControl instance = new GameEndControl();
-        String expResult = "";
+        String expResult = "YOU LOSE";
         String result = instance.loseGame(health, location, player);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
     
 }

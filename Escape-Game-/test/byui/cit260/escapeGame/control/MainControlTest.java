@@ -25,11 +25,11 @@ public class MainControlTest {
         System.out.println("saveGame");
         String name = "";
         MainControl instance = new MainControl();
-        String expResult = "";
+        String expResult = "player + location + item + clue + healthOfPlayer";
         String result = instance.saveGame(name);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      
     }
 
     /**
@@ -44,7 +44,7 @@ public class MainControlTest {
         String result = instance.newGame(name);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
@@ -55,11 +55,11 @@ public class MainControlTest {
         System.out.println("loadSavedGame");
         String name = "";
         MainControl instance = new MainControl();
-        String expResult = "";
+        String expResult = "player + location + item + clue + healthOfPlayer";
         String result = instance.loadSavedGame(name);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
@@ -74,7 +74,7 @@ public class MainControlTest {
         String result = instance.help(helpControl);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -88,8 +88,7 @@ public class MainControlTest {
         boolean expResult = false;
         boolean result = instance.quit(answer);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
     
 }

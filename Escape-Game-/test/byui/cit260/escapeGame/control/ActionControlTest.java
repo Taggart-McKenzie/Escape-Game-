@@ -29,7 +29,7 @@ public class ActionControlTest {
         int result = instance.moveUp(location);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+ 
     }
 
     /**
@@ -44,7 +44,7 @@ public class ActionControlTest {
         int result = instance.moveDown(location);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -59,7 +59,7 @@ public class ActionControlTest {
         int result = instance.moveLeft(location);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -74,7 +74,7 @@ public class ActionControlTest {
         int result = instance.moveRight(location);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -89,7 +89,7 @@ public class ActionControlTest {
         int result = instance.goBack(location);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -105,7 +105,7 @@ public class ActionControlTest {
         double result = instance.pickUpItem(problem, item);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -114,13 +114,14 @@ public class ActionControlTest {
     @Test
     public void testUseItem() {
         System.out.println("useItem");
-        int Item = 0;
+         String item;
+        item = "";
         ActionControl instance = new ActionControl();
         String expResult = "";
-        String result = instance.useItem(Item);
+        String result = instance.useItem(item);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -136,7 +137,7 @@ public class ActionControlTest {
         double result = instance.solveTriangle(base, height);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -145,16 +146,17 @@ public class ActionControlTest {
     @Test
     public void testSolveForX() {
         System.out.println("solveForX");
-        double x = 0.0;
-        double y = 0.0;
-        double z = 0.0;
+        double x = 0.2;
+        double y = 8;
+        double z = 7;
         ActionControl instance = new ActionControl();
-        double expResult = 0.0;
+        double expResult = 0.2;
         double result = instance.solveForX(x, y, z);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(expResult, result, 0.2);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
+    
 
     /**
      * Test of quit method, of class ActionControl.
@@ -168,7 +170,41 @@ public class ActionControlTest {
         boolean result = instance.quit(answer);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
+    }
+
+    /**
+     * Test of solveCube method, of class ActionControl.
+     */
+    @Test
+    public void testSolveCube() {
+        System.out.println("solveCube");
+        double base = 0.0;
+        double height = 0.0;
+        double length = 0.0;
+        double volume = 0.0;
+        ActionControl instance = new ActionControl();
+        double expResult = 0.0;
+        double result = instance.solveCube(base, height, length, volume);
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+      
+    }
+
+    /**
+     * Test of solvePower method, of class ActionControl.
+     */
+    @Test
+    public void testSolvePower() {
+        System.out.println("solvePower");
+        double x;
+        x = 1.0;
+        ActionControl instance = new ActionControl();
+        double expResult = 1.0;
+        double result = instance.solvePower(x);
+        assertEquals(expResult, result, 1.0);
+        // TODO review the generated test code and remove the default call to fail.
+     
     }
     
 }

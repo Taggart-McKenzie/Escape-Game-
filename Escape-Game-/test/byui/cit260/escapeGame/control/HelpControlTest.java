@@ -29,7 +29,7 @@ public class HelpControlTest {
         String result = instance.clue(clue);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -44,7 +44,7 @@ public class HelpControlTest {
         String result = instance.rules(rules);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -59,7 +59,7 @@ public class HelpControlTest {
         int result = instance.movement(actionControl);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -74,7 +74,7 @@ public class HelpControlTest {
         String result = instance.lookAround(map);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      
     }
 
     /**
@@ -89,7 +89,7 @@ public class HelpControlTest {
         String result = instance.usefulItems(item);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
 
     /**
@@ -104,7 +104,7 @@ public class HelpControlTest {
         boolean result = instance.quit(answer);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
     
 }
