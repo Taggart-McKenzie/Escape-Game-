@@ -64,10 +64,8 @@ public class ActionControl {
        }
        return surfaceArea;
    }
-   public double solveForX(double x, double y, double z){
-       x = 0;
-       y = 0;
-       z = 0;
+   public double solveForX(double y, double z){
+      double x = 0.0;
        
       if (y<0){
           return -1;
@@ -86,7 +84,8 @@ public class ActionControl {
       }
       return x;
    } 
-   public double solveCube(double base, double height, double length, double volume){
+   public double solveCube(double base, double height, double length){
+       double volume = 0.0;
        
        	if(base<0 || base>10){
             return -1;

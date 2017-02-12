@@ -151,7 +151,7 @@ public class ActionControlTest {
         double z = 7;
         ActionControl instance = new ActionControl();
         double expResult = 0.2;
-        double result = instance.solveForX(x, y, z);
+        double result = instance.solveForX(y, z);
         assertEquals(expResult, result, 0.2);
         // TODO review the generated test code and remove the default call to fail.
 
@@ -185,7 +185,8 @@ public class ActionControlTest {
         double volume = 0.0;
         ActionControl instance = new ActionControl();
         double expResult = 0.0;
-        double result = instance.solveCube(base, height, length, volume);
+        double result;
+        result = instance.solveCube(base, height, length);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
       
