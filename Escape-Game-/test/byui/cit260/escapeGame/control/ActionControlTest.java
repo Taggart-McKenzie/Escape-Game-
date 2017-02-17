@@ -170,8 +170,8 @@ public class ActionControlTest {
         double y = 6;
         double z = 7;
         ActionControl instance = new ActionControl();
-        double expResult = 0;
-        double result = instance.solveForX(x, y, z);
+        double expResult = 0.2;
+        double result = instance.solveForX(y, z);
         assertEquals(expResult, result, 0.2);
         // TODO review the generated test code and remove the default call to fail.
 

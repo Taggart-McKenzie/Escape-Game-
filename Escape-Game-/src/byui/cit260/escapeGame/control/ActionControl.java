@@ -64,10 +64,8 @@ public class ActionControl {
        }
        return surfaceArea;
    }
-   public double solveForX(double x, double y, double z){
-       x = 0;
-       y = 0;
-       z = 0;
+   public double solveForX(double y, double z){
+      double x = 0.0;
        
       if (y<0){
           return -1;
