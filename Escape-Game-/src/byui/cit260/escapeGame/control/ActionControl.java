@@ -86,9 +86,11 @@ public class ActionControl {
       }
       return x;
    } 
-   public double solveCube(double base, double height, double length, double volume){
+   public double solveCube(double base, double height, double length){
+       double volume = 0.0;
        
-       	if(base<0 || base>10){
+       	
+                if(base<0 || base>10){
             return -1;
    }
         else if(height<0 || height>10){

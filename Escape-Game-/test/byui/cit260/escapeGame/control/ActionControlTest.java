@@ -5,8 +5,12 @@
  */
 package byui.cit260.escapeGame.control;
 
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.BeforeClass;
 
 /**
  *
@@ -15,6 +19,22 @@ import static org.junit.Assert.*;
 public class ActionControlTest {
     
     public ActionControlTest() {
+    }
+
+    @BeforeClass
+    public static void setUpClass() throws Exception {
+    }
+
+    @AfterClass
+    public static void tearDownClass() throws Exception {
+    }
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
     }
 
     /**
@@ -146,11 +166,11 @@ public class ActionControlTest {
     @Test
     public void testSolveForX() {
         System.out.println("solveForX");
-        double x = 0.2;
-        double y = 8;
+        double x = -1;
+        double y = 6;
         double z = 7;
         ActionControl instance = new ActionControl();
-        double expResult = 0.2;
+        double expResult = 0;
         double result = instance.solveForX(x, y, z);
         assertEquals(expResult, result, 0.2);
         // TODO review the generated test code and remove the default call to fail.
@@ -172,20 +192,19 @@ public class ActionControlTest {
         // TODO review the generated test code and remove the default call to fail.
        
     }
-
     /**
      * Test of solveCube method, of class ActionControl.
      */
     @Test
     public void testSolveCube() {
         System.out.println("solveCube");
-        double base = 0.0;
-        double height = 0.0;
-        double length = 0.0;
-        double volume = 0.0;
+        double base = -1.0;
+        double height = 7.0;
+        double length = 7.0;
+        double volume = -1.0;
         ActionControl instance = new ActionControl();
-        double expResult = 0.0;
-        double result = instance.solveCube(base, height, length, volume);
+        double expResult = -1.0;
+        double result = instance.solveCube(base, height, length);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
       
