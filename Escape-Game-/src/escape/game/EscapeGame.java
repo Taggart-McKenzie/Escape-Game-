@@ -13,6 +13,7 @@ import byui.cit260.escapeGame.model.Location;
 import byui.cit260.escapeGame.model.Map;
 import byui.cit260.escapeGame.model.Player;
 import byui.cit260.escapeGame.model.Problem;
+import byui.cit260.escapeGame.view.StartProgramView;
 
 /**
  *
@@ -23,89 +24,30 @@ public class EscapeGame {
     /**
      * @param args the command line arguments
      */
+    private static Game currentGame = null;
+    private static Player player  = null;
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        EscapeGame.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        EscapeGame.player = player;
+    }
+    
     public static void main(String[] args) {
-        //Player class
-        Player playerOne = new Player();
         
-        playerOne.setName("Jon");
-        playerOne.setLocation("Hall");
-        playerOne.setCluesFound("Look in the stairway.");
-        playerOne.setHealthOfPlayer("9 lives remaining.");
-        
-        String playerInfo = playerOne.toString();
-        System.out.println(playerInfo);
-        
-        //Item class
-        Item myItem = new Item();
-        
-        myItem.setBook("Bible");
-        myItem.setBowl("Metal Bowl");
-        myItem.setCoffin("Wooden Coffin");
-        myItem.setKeys("Jail Keys");
-        myItem.setStick("Long Stick");
-        
-        String itemInfo = myItem.toString();
-        System.out.println(itemInfo);
-                
-        //Problem class
-        Problem myProblem = new Problem();
-        
-        myProblem.setSolveCube(150);
-        myProblem.setSolveForX(5);
-        myProblem.setSolvePower(25);
-        myProblem.setSolveTriangle(10);
-        
-        String problemInfo = myProblem.toString();
-        System.out.println(problemInfo);
-        
-        //Location class
-        Location myLocation = new Location();
-        
-        myLocation.setAttribute("What is an attribute?");
-        myLocation.setColumn(3);
-        myLocation.setRow(4);
-        myLocation.setDescription("Bathroom");
-        myLocation.setItem("Stick");
-        myLocation.setProblem(25);
-        
-        String locationInfo = myLocation.toString();
-        System.out.println(locationInfo);
-        
-        //Map class
-        Map myMap = new Map();
-        
-        myMap.setLocation("Cell");
-        myMap.setNumColumns(5);
-        myMap.setNumRows(5);
-        
-        String mapInfo = myMap.toString();
-        System.out.println(mapInfo);
-        
-        //Clues class
-        Clue myClues = new Clue();
-        
-        myClues.setCluesFound("Ask for a clue.");
-        
-        String cluesInfo = myClues.toString();
-        System.out.println(cluesInfo);
-        
-        //Game class
-        Game myGame = new Game();
-        
-        myGame.setPlayer("Player One");
-        myGame.setNumberOfTurns(10);
-        
-        String gameInfo = myGame.toString();
-        System.out.println(gameInfo);
-        
-        //Characters class
-        Characters myCharacters = new Characters();
-        
-        myCharacters.setPrisoner("Cell mate");
-        myCharacters.setWarden("Warden Bob");
-        
-        String charactersInfo = myCharacters.toString();
-        System.out.println(charactersInfo);
+        //create StartProgramViewOrig and display the start program view
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
         
     }
     

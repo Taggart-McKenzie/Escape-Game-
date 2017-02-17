@@ -5,11 +5,28 @@
  */
 package byui.cit260.escapeGame.control;
 
+import byui.cit260.escapeGame.model.Player;
+import escape.game.EscapeGame;
+
 /**
  *
  * @author mckenzietaggart
  */
 public class GameControl {
+
+    public static Player createPlayer(String playersName) {
+        
+        if (playersName == null) {
+           return null; 
+        }
+        
+        Player player = new Player();
+        player.setName(playersName);
+        
+        EscapeGame.setPlayer(player); //save the player
+        
+        return player;
+    }
     
    public int goBack(int location){
        int prevLocation = location--;
