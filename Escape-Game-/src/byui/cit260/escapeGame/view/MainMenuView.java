@@ -5,12 +5,15 @@
  */
 package byui.cit260.escapeGame.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author mckenzietaggart
  */
 public class MainMenuView {
    private String menu;
+   private String promptMessage;
    public void displayMainMenuView() {
    boolean done = false;
    do{
@@ -27,8 +30,23 @@ public class MainMenuView {
 
 private String getMenuOption() {
     
-   System.out.println("\n*** doAction() function called***)");
-   return "";
+   Scanner keyboard = new Scanner(System.in); //get infile for keyboard
+        String value = ""; //value to be returned
+        boolean valid = false; //initialize to not valid
+        
+        while (!valid) {//loop while an invalid value is enter
+            System.out.println("\n" + this.promptMessage);
+            
+            value = keyboard.nextLine(); //get next line typed on keyboard
+            value = value.trim(); //trim off leading and trailing blanks
+            
+            if (value.length() < 1){ //value is blank
+                System.out.println("\nInvalid value: value cannot be blank");
+                continue;
+            }
+            
+            break; //end the loop
+} return value;
 }
 private boolean doAction(String menuOption) {
     System.out.println("\n*** doAction() function called ***)");
@@ -46,7 +64,11 @@ private boolean doAction(String menuOption) {
                      +"\nH - Help"
                      +"\nQ - Quit"
                      +"\n------------------------------------";
-   }  
-
+     
+   
+   
+        
+        }
+        
+    
 }
-
