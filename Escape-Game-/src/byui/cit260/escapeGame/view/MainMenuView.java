@@ -9,18 +9,35 @@ import java.util.Scanner;
 
 /**
  *
- * @author mckenzietaggart
+ * @author samantha
  */
 public class MainMenuView {
+    
    private String menu;
-   private String promptMessage;
+   
+   public MainMenuView() {
+       this.menu= "\n"
+               +"\n------------------------------------"
+                     +"\n| Welcome to the Main Menu   |"
+                     +"\n ----------------------------"
+                     +"\nS - Save"
+                     +"\nB - Begin New Game"
+                     +"\nL - Load Saved Game"
+                     +"\nH - Help"
+                     +"\nQ - Quit"
+                     +"\n ----------------------------";
+   }
+  
    public void displayMainMenuView() {
-   boolean done = false;
-   do{
+   
+       boolean done = false;
+       do{
+           //prompt for and get players name
        String menuOption = this.getMenuOption();
-       if(menuOption.toUpperCase().equals("Q"))// user want to save 
+       if(menuOption.toUpperCase().equals("Q")) {// user want to quit 
            return; // exit the game
-
+       }
+       
            //do the requested action and display the next view
        done = this.doAction(menuOption);
 
@@ -35,7 +52,7 @@ private String getMenuOption() {
         boolean valid = false; //initialize to not valid
         
         while (!valid) {//loop while an invalid value is enter
-            System.out.println("\n" + this.promptMessage);
+            System.out.println("\n" + this.menu);
             
             value = keyboard.nextLine(); //get next line typed on keyboard
             value = value.trim(); //trim off leading and trailing blanks
@@ -52,23 +69,7 @@ private boolean doAction(String menuOption) {
     System.out.println("\n*** doAction() function called ***)");
     return true;
 }
-   
-    public MainMenuView() {
-           this.menu = "\n"
-                     +"\n------------------------------------"
-                     +"\n| Main Menue                        |"
-                     +"\n------------------------------------"
-                     +"\nS - Save"
-                     +"\nB - Begin New Game"
-                     +"\nL - Load Saved Game"
-                     +"\nH - Help"
-                     +"\nQ - Quit"
-                     +"\n------------------------------------";
-     
-   
-   
-        
-        }
-        
+
     
 }
+
