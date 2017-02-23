@@ -167,8 +167,8 @@ public class ActionControlTest {
     public void testSolveForX() {
         System.out.println("solveForX");
         double x = -1;
-        double y = 6;
-        double z = 7;
+        double y = 7;
+        double z = 6;
         ActionControl instance = new ActionControl();
         double expResult = 0.2;
         double result = instance.solveForX(y, z);
