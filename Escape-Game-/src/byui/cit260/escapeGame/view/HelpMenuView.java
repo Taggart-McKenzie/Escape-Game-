@@ -13,13 +13,13 @@ import java.util.Scanner;
  */
 public class HelpMenuView {
 
-    private String helpmenu;
+    private String helpMenu;
     
     //default constructor
     public HelpMenuView() {
-          this.helpmenu = "\n"
+          this.helpMenu = "\n"
                      +"\n------------------------------------"
-                     +"\n| Main Menu                        |"
+                     +"\n| Help Menu                        |"
                      +"\n------------------------------------"
                      +"\nC - Clue"
                      +"\nR - Rules"
@@ -80,7 +80,7 @@ private String getHelpOption() {
         boolean valid = false; //initialize to not valid
         
         while (!valid) {//loop while an invalid value is enter
-            System.out.println("\n" + this.helpmenu);
+            System.out.println("\n" + this.helpMenu);
             
             value = keyboard.nextLine(); //get next line typed on keyboard
             value = value.trim(); //trim off leading and trailing blanks

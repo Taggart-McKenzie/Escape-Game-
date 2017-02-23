@@ -37,7 +37,7 @@ public class MainMenuView {
    do {
        //prompt for and get players name
        String menuOption = this.getMenuOption();
-       if(menuOption.toUpperCase().equals("Q"))// user want to quit 
+       if(menuOption.toUpperCase().equals("Q"))//user wants to quit 
            return; // exit the game
 
         //do the requested action and display the next view
@@ -99,7 +99,10 @@ private void saveGame(){
 
 private void newGame() {
     //create a new game
-    GameControl.createNewGame(EscapeGame.getPlayer());
+    int value = GameControl.createNewGame(EscapeGame.getPlayer());
+    if (value < 0) {
+        System.out.println("ERROR - Failed to create new game");
+    }
     //display the game menu
     GameMenuView gameMenu = new GameMenuView();
     gameMenu.displayMenu();
@@ -110,15 +113,16 @@ private void loadSavedGame() {
     System.out.println("*** loadSavedGame function called ***");
 }
 
-private void help() {
+private void help() {       
     System.out.println("*** help function called ***");
-}
+    }
 
     private static class GameControl {
 
         private static void createNewGame(Player player) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
+ 
+            
+}
 
         public GameControl() {
         }
