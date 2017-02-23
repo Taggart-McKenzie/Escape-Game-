@@ -126,9 +126,5 @@ public class StartProgramView {
         
         
     }
-
-    private void displayNextView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     }
     
