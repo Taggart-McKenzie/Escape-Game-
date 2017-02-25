@@ -30,18 +30,18 @@ public class GameEndMenuView {
         
     boolean done = false;//set flag to not done
     do {
-        //prompt for and get players name
-        String menuOption = this.getEndOption();
-        if(menuOption.toUpperCase().equals("Q"))//user wants to quit
+        //prompt for and get menu option
+        String endMenuOption = this.getEndMenuOption();
+        if(endMenuOption.toUpperCase().equals("Q"))//user wants to quit
             return; //exit the game
             
         //do the requested action and display the next view
-        done = this.doAction(menuOption);
+        done = this.doAction(endMenuOption);
             
     } while(!done);
 }
 
-    private String getEndOption() {
+    private String getEndMenuOption() {
         Scanner keyboard = new Scanner(System.in); //get infile for keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not valid
@@ -83,9 +83,15 @@ public class GameEndMenuView {
 
     private void winGame() {
         System.out.println("*** winGame function called ***");
+        //display the game end menu
+        GameEndMenuView endMenu = new GameEndMenuView();
+        endMenu.displayGameEndMenuView();
     }
 
     private void loseGame() {
         System.out.println("*** loseGame funciton called ***");
+        GameEndMenuView endMenu = new GameEndMenuView();
+        endMenu.displayGameEndMenuView();
     }   
+
 }

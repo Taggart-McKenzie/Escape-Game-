@@ -26,6 +26,7 @@ public class MainMenuView {
                      +"\nS - Save"
                      +"\nB - Begin New Game"
                      +"\nL - Load Saved Game"
+                     +"\nE - End Game"
                      +"\nH - Help"
                      +"\nQ - Quit"
                      +"\n------------------------------------";
@@ -87,6 +88,9 @@ private boolean doAction(String choice) {
         case "H"://Help
             this.help();
             break;
+        case "E"://End Game
+            this.gameEndContol();
+            break;
         default:
             System.out.println("\n*** Invalid Selection *** Try Again");
             break;
@@ -111,6 +115,10 @@ private void newGame() {
 
 private void loadSavedGame() {
     System.out.println("*** loadSavedGame function called ***");
+}
+
+private void gameEndControl() {
+    System.out.println("***end function called ***");
 }
 
 private void help() {       

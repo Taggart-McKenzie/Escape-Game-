@@ -18,7 +18,7 @@ public class GameEndControl {
         else {
             return "YOU LOSE";
         }
-
+        
     }
 
     public String loseGame(int health, int location, int player){
