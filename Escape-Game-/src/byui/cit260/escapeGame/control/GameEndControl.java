@@ -10,9 +10,9 @@ package byui.cit260.escapeGame.control;
  * @author samanthabrown
  */
 public class GameEndControl {
-    public String winGame(int health, int location, int player){
+    public String winGame(int health, int location){
 
-        if (health >= 1 && location == 25 && player == 1){
+        if (health >= 1 && location == 25){
             return "YOU WIN";
         }
         else {
@@ -21,12 +21,12 @@ public class GameEndControl {
         
     }
 
-    public String loseGame(int health, int location, int player){
+    public String loseGame(int health, int location){
 
-        if (health < 1 || location != 25 || player != 1){
+        if (health < 1 || location != 25){
             return"YOU LOSE";
         }
-        else if (health >= 1 && location == 25 && player == 1){
+        else if (health >= 1 && location == 25){
             return "YOU WIN";
         }
 //we are not quite sure we are getting this red flag on line 30.

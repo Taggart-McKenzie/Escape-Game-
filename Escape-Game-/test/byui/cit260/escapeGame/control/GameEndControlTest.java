@@ -28,7 +28,7 @@ public class GameEndControlTest {
         int player = 1;
         GameEndControl instance = new GameEndControl();
         String expResult = "YOU WIN";
-        String result = instance.winGame(health, location, player);
+        String result = instance.winGame(health, location);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
 
@@ -45,7 +45,7 @@ public class GameEndControlTest {
         int player = 4;
         GameEndControl instance = new GameEndControl();
         String expResult = "YOU LOSE";
-        String result = instance.loseGame(health, location, player);
+        String result = instance.loseGame(health, location);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
 

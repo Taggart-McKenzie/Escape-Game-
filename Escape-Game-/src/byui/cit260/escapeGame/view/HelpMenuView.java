@@ -48,7 +48,7 @@ public class HelpMenuView {
             case "L": //Look Around
                 this.lookAround();
                 break;
-            case "U": //Usefule Items
+            case "U": //Useful Items
                 this.getItems();
                 break;
             default:
@@ -67,7 +67,7 @@ public void displayHelpMenuView() {
         return; //exit the game
         
         //do the requested action and display the next view
-        done = this.doAction(helpOption);
+            done = this.doAction(helpOption);
         
     }while (!done);
 }

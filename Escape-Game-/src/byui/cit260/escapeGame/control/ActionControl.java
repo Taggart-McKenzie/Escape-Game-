@@ -82,7 +82,7 @@ public class ActionControl {
         } else if (y > 0 && x > 0 && z < y) {
             y = 50;
             z = 10;
-            x = (y - z) / 5;
+            x = (y - z) / 5;//x = (50-10)/5
             return x;
         }
         return x;

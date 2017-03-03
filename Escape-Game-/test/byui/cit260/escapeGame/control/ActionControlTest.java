@@ -5,12 +5,10 @@
  */
 package byui.cit260.escapeGame.control;
 
-import org.junit.After;
-import org.junit.AfterClass;
+
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.Before;
-import org.junit.BeforeClass;
+
 
 /**
  *
@@ -20,23 +18,7 @@ public class ActionControlTest {
     
     public ActionControlTest() {
     }
-
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownClass() throws Exception {
-    }
-
-    @Before
-    public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
-    }
-
+    
     /**
      * Test of moveUp method, of class ActionControl.
      */
@@ -166,13 +148,13 @@ public class ActionControlTest {
     @Test
     public void testSolveForX() {
         System.out.println("solveForX");
-        double x = -1;
-        double y = 6;
-        double z = 7;
+        double x = 0;
+        double y = 50;
+        double z = 10;
         ActionControl instance = new ActionControl();
-        double expResult = 0.2;
+        double expResult = 8.0;
         double result = instance.solveForX(y, z);
-        assertEquals(expResult, result, 0.2);
+        assertEquals(expResult, result, 8.0);
         // TODO review the generated test code and remove the default call to fail.
 
     }
