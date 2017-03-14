@@ -6,7 +6,7 @@
 package byui.cit260.escapeGame.model;
 
 import java.io.Serializable;
-import java.util.Objects;
+import java.util.Arrays;
 
 /**
  *
@@ -17,13 +17,33 @@ public class Map implements Serializable{
     //class imstance variables
     private int numRows;
     private int numColumns;
-    private String location;
+    private Location[][] locations;
 
     public Map() {
     }
     
-    
+    public void init(int rows, int cols) {
+        numRows = rows;
+        numColumns = cols;
+        
+        locations = new Location[numRows][numColumns];
+        
+        Location prisonCell = new Location();
+        prisonCell.setRow(0);
+        prisonCell.setColumn(0);
+        prisonCell.setDescription("You are in a dark prison cell.");
+        prisonCell.setAbbreviation("C");
+        
+        locations[0][0] = prisonCell;
+        
+        
+        //TODO Add more locations to the map so all 25 map positions are filled
+    }
 
+    public Location getLocationAt(int row, int col) {
+        return locations[row][col];
+    }
+    
     public int getNumRows() {
         return numRows;
     }
@@ -40,30 +60,23 @@ public class Map implements Serializable{
         this.numColumns = numColumns;
     }
 
-    public String getLocation() {
-        return location;
+    public Location[][] getLocations() {
+        return locations;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + this.numRows;
-        hash = 89 * hash + this.numColumns;
-        hash = 89 * hash + Objects.hashCode(this.location);
+        hash = 53 * hash + this.numRows;
+        hash = 53 * hash + this.numColumns;
+        hash = 53 * hash + Arrays.deepHashCode(this.locations);
         return hash;
     }
 
-    @Override
-    public String toString() {
-        return "Map{" + "numRows=" + numRows + ", numColumns=" + numColumns + ", location=" + location + '}';
-    }
-
-    
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -82,12 +95,11 @@ public class Map implements Serializable{
         if (this.numColumns != other.numColumns) {
             return false;
         }
-        if (!Objects.equals(this.location, other.location)) {
+        if (!Arrays.deepEquals(this.locations, other.locations)) {
             return false;
         }
         return true;
     }
     
-   
     
 }

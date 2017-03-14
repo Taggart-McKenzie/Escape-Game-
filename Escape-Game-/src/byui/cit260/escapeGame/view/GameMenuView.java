@@ -5,7 +5,10 @@
  */
 package byui.cit260.escapeGame.view;
 
-import java.util.Scanner;
+import byui.cit260.escapeGame.model.Location;
+import escape.game.EscapeGame;
+
+//TODO ADD MOVEMENT OPTIONS AND MAKE MOVEMENT WORK
 
 /**
  *
@@ -19,7 +22,6 @@ public class GameMenuView extends View {
                 + "\n-----------------------------------"
                 + "\n| Game Menu                       |"
                 + "\n-----------------------------------"
-                + "\nG - Go Back"
                 + "\nM - View Map"
                 + "\nI - View Items"
                 + "\nH - View Health"
@@ -32,9 +34,6 @@ public class GameMenuView extends View {
         choice = choice.toUpperCase();//convert choice to upper case
 
         switch (choice) {
-            case "G": //go back to previous location
-                this.goBack();
-                break;
             case "M": //view map
                 this.viewMap();
                 break;
@@ -51,12 +50,14 @@ public class GameMenuView extends View {
         return false;
     }
 
-    private void goBack() {
-        System.out.println("*** goBack function called ***");
-    }
-
     private void viewMap() {
-        System.out.println("*** viewMap function called");
+        
+        //TODO iterate over the map and display locations
+        
+        
+        Location playerLocation = EscapeGame.getPlayer().getLocation();
+        System.out.println("You are at location (" + playerLocation.getRow() + ", " + playerLocation.getColumn() + ")");
+        System.out.println(playerLocation.getDescription());
     }
 
     private void viewItem() {

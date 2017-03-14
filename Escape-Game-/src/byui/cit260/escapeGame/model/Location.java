@@ -12,21 +12,20 @@ import java.util.Objects;
  *
  * @author mckenzietaggart
  */
-public class Location implements Serializable{
-    
+public class Location implements Serializable {
+
     //class instance variables
     private int row;
     private int column;
     private String description;
-    private String item;
-    private int problem;
-    private String attribute;
+    private String abbreviation;
+    private Item item;
+    private Problem problem;
+    private boolean visited;
 
     public Location() {
     }
 
-    
-    
     public int getRow() {
         return row;
     }
@@ -51,47 +50,49 @@ public class Location implements Serializable{
         this.description = description;
     }
 
-    public String getItem() {
+    public Item getItem() {
         return item;
     }
 
-    public void setItem(String item) {
+    public void setItem(Item item) {
         this.item = item;
     }
 
-    public int getProblem() {
+    public Problem getProblem() {
         return problem;
     }
 
-    public void setProblem(int problem) {
+    public void setProblem(Problem problem) {
         this.problem = problem;
     }
 
-    public String getAttribute() {
-        return attribute;
+    public boolean isVisited() {
+        return visited;
     }
 
-    public void setAttribute(String attribute) {
-        this.attribute = attribute;
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
+    public String getAbbreviation() {
+        return abbreviation;
+    }
+
+    public void setAbbreviation(String abbreviation) {
+        this.abbreviation = abbreviation;
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 61 * hash + this.row;
-        hash = 61 * hash + this.column;
-        hash = 61 * hash + Objects.hashCode(this.description);
-        hash = 61 * hash + Objects.hashCode(this.item);
-        hash = 61 * hash + this.problem;
-        hash = 61 * hash + Objects.hashCode(this.attribute);
+        int hash = 7;
+        hash = 89 * hash + this.row;
+        hash = 89 * hash + this.column;
+        hash = 89 * hash + Objects.hashCode(this.description);
+        hash = 89 * hash + Objects.hashCode(this.item);
+        hash = 89 * hash + Objects.hashCode(this.problem);
         return hash;
     }
 
-    @Override
-    public String toString() {
-        return "Location{" + "row=" + row + ", column=" + column + ", description=" + description + ", item=" + item + ", problem=" + problem + ", attribute=" + attribute + '}';
-    }
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -110,22 +111,16 @@ public class Location implements Serializable{
         if (this.column != other.column) {
             return false;
         }
-        if (this.problem != other.problem) {
-            return false;
-        }
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
         if (!Objects.equals(this.item, other.item)) {
             return false;
         }
-        if (!Objects.equals(this.attribute, other.attribute)) {
+        if (!Objects.equals(this.problem, other.problem)) {
             return false;
         }
         return true;
     }
-    
-    
+
 }
-
-

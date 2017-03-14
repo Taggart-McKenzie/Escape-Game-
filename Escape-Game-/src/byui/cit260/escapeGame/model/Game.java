@@ -12,23 +12,30 @@ import java.util.Objects;
  *
  * @author samanthabrown
  */
-public class Game implements Serializable{
-    
+public class Game implements Serializable {
+
     //class instance variables
-    private String player;
+    private Player player;
+    private Map map;
     private int numberOfTurns;
 
     public Game() {
     }
-    
-    
 
-    public String getPlayer() {
+    public Player getPlayer() {
         return player;
     }
 
-    public void setPlayer(String player) {
+    public void setPlayer(Player player) {
         this.player = player;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
     }
 
     public int getNumberOfTurns() {
@@ -43,16 +50,11 @@ public class Game implements Serializable{
     public int hashCode() {
         int hash = 5;
         hash = 97 * hash + Objects.hashCode(this.player);
+        hash = 97 * hash + Objects.hashCode(this.map);
         hash = 97 * hash + this.numberOfTurns;
         return hash;
     }
 
-    @Override
-    public String toString() {
-        return "Game{" + "player=" + player + ", numberOfTurns=" + numberOfTurns + '}';
-    }
-
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -71,9 +73,10 @@ public class Game implements Serializable{
         if (!Objects.equals(this.player, other.player)) {
             return false;
         }
+        if (!Objects.equals(this.map, other.map)) {
+            return false;
+        }
         return true;
     }
-    
-    
-    
+
 }

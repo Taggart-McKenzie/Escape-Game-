@@ -6,6 +6,7 @@
 package byui.cit260.escapeGame.model;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -16,15 +17,13 @@ public class Player implements Serializable{
     
     //classes instance variables
     private String name;
-    private String location;
-    private String cluesFound;
-    private String healthOfPlayer;
+    private Location location;
+    private List<Clue> cluesFound;
+    private int healthOfPlayer;
 
     public Player() {
     }
 
-    
-    
     public String getName() {
         return name;
     }
@@ -33,46 +32,40 @@ public class Player implements Serializable{
         this.name = name;
     }
 
-    public String getLocation() {
+    public Location getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(Location location) {
         this.location = location;
     }
 
-    public String getCluesFound() {
+    public List<Clue> getCluesFound() {
         return cluesFound;
     }
 
-    public void setCluesFound(String cluesFound) {
+    public void setCluesFound(List<Clue> cluesFound) {
         this.cluesFound = cluesFound;
     }
 
-    public String getHealthOfPlayer() {
+    public int getHealthOfPlayer() {
         return healthOfPlayer;
     }
 
-    public void setHealthOfPlayer(String healthOfPlayer) {
+    public void setHealthOfPlayer(int healthOfPlayer) {
         this.healthOfPlayer = healthOfPlayer;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 13 * hash + Objects.hashCode(this.name);
-        hash = 13 * hash + Objects.hashCode(this.location);
-        hash = 13 * hash + Objects.hashCode(this.cluesFound);
-        hash = 13 * hash + Objects.hashCode(this.healthOfPlayer);
+        int hash = 5;
+        hash = 67 * hash + Objects.hashCode(this.name);
+        hash = 67 * hash + Objects.hashCode(this.location);
+        hash = 67 * hash + Objects.hashCode(this.cluesFound);
+        hash = 67 * hash + this.healthOfPlayer;
         return hash;
     }
 
-    @Override
-    public String toString() {
-        return "Player{" + "name=" + name + ", location=" + location + ", cluesFound=" + cluesFound + ", heathOfPlayer=" + healthOfPlayer + '}';
-    }
-
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -85,6 +78,9 @@ public class Player implements Serializable{
             return false;
         }
         final Player other = (Player) obj;
+        if (this.healthOfPlayer != other.healthOfPlayer) {
+            return false;
+        }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
@@ -94,11 +90,9 @@ public class Player implements Serializable{
         if (!Objects.equals(this.cluesFound, other.cluesFound)) {
             return false;
         }
-        if (!Objects.equals(this.healthOfPlayer, other.healthOfPlayer)) {
-            return false;
-        }
         return true;
     }
+
     
     
 }
