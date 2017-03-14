@@ -5,6 +5,7 @@
  */
 package byui.cit260.escapeGame.view;
 
+import byui.cit260.escapeGame.control.GameControl;
 import byui.cit260.escapeGame.model.Player;
 import escape.game.EscapeGame;
 import java.util.Scanner;
@@ -14,94 +15,72 @@ import java.util.Scanner;
  * @author mckenzietaggart
  */
 public class MainMenuView extends View {
-    
-    public MainMenuView(){
-                super("\n"
-                     +"\n------------------------------------"
-                     +"\n| Main Menu                        |"
-                     +"\n------------------------------------"
-                     +"\nS - Save"
-                     +"\nB - Begin New Game"
-                     +"\nL - Load Saved Game"
-                     +"\nE - End Game"
-                     +"\nH - Help"
-                     +"\nQ - Quit"
-                     +"\n------------------------------------");
-    }
-@Override
-public boolean doAction(String value) {
-    
-    value = value.toUpperCase(); //convert to all upper case
-    
-    switch(value) {
-        case "S": //save
-            this.saveGame();
-            break;
-        case "B": //begin new game
-            this.newGame();
-            break;
-        case "L"://load saved game
-            this.loadSavedGame();
-            break;
-        case "H"://Help
-            this.help();
-            break;
-        case "E"://End Game
-            this.gameEndControl();
-            break;
-        default:
-            System.out.println("\n*** Invalid Selection *** Try Again");
-            break;
-    }
-    return false;
-}
-private void saveGame(){
-    System.out.println("*** saveGame function called***");
-}
 
-private void newGame() {
-    //create a new game
-    Player player = GameControl.createNewGame(playersName);
-
-    //display the game menu
-    GameMenuView gameMenu = new GameMenuView();
-    gameMenu.display();
-    
-}
-
-private void loadSavedGame() {
-    System.out.println("*** loadSavedGame function called ***");
-}
-
-private void gameEndControl() {
-    System.out.println("***end function called ***");
-}
-
-private void help() {       
-    System.out.println("*** help function called ***");
+    public MainMenuView() {
+        super("\n"
+                + "\n------------------------------------"
+                + "\n| Main Menu                        |"
+                + "\n------------------------------------"
+                + "\nS - Save"
+                + "\nB - Begin New Game"
+                + "\nL - Load Saved Game"
+                + "\nE - End Game"
+                + "\nH - Help"
+                + "\nQ - Quit"
+                + "\n------------------------------------");
     }
 
     @Override
-    public String display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public boolean doAction(String value) {
 
-    @Override
-    public String getInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        value = value.toUpperCase(); //convert to all upper case
 
-    private static class GameControl {
-
-        private static void createNewGame(Player player) {
- 
-            
-}
-
-        public GameControl() {
+        switch (value) {
+            case "S": //save
+                this.saveGame();
+                break;
+            case "B": //begin new game
+                this.newGame();
+                break;
+            case "L"://load saved game
+                this.loadSavedGame();
+                break;
+            case "H"://Help
+                this.help();
+                break;
+            case "E"://End Game
+                this.gameEndControl();
+                break;
+            default:
+                System.out.println("\n*** Invalid Selection *** Try Again");
+                break;
         }
+        return false;
     }
 
+    private void saveGame() {
+        System.out.println("*** saveGame function called***");
+    }
+
+    private void newGame() {
+        //create a new game
+        GameControl.createNewGame(EscapeGame.getPlayer());
+
+        //display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
+    }
+
+    private void loadSavedGame() {
+        System.out.println("*** loadSavedGame function called ***");
+    }
+
+    private void gameEndControl() {
+        System.out.println("***end function called ***");
+    }
+
+    private void help() {
+        HelpMenuView hmv = new HelpMenuView();
+        hmv.display();
+    }
 }
-
-

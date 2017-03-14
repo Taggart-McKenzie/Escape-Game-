@@ -10,7 +10,8 @@ package byui.cit260.escapeGame.control;
  * @author mckenzietaggart
  */
 public class StartControl {
-    public String openGame(String mainControl){
+
+    public String openGame(String mainControl) {
         return mainControl;
     }
 }

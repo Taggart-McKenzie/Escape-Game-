@@ -123,16 +123,6 @@ public class StartProgramView {
         MainMenuView mainMenuView = new MainMenuView();
 
         //Display the main menu view
-        mainMenuView.displayMainMenuView();
-
-    }
-
-    }
-    
-
-
-    private void displayNextView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        mainMenuView.display();
     }
 }
-
