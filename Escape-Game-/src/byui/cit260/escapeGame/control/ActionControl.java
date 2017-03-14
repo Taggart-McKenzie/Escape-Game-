@@ -15,12 +15,13 @@ public class ActionControl {
         
         //Grab the player's current location
         
-        //Check to see if the current row is 0, if it is, don't let the player move up
+        //Check to see if the current row is 0, if it is, don't let the player move up (return "false")
         
         //Grab the location from the map that is one row less than player's current location row
         
         //Set the player's current location to that new location
         
+        //return "true"
         int x = 0;
         int nextLocation;
         nextLocation = location + x;
