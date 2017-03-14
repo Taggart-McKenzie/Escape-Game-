@@ -22,6 +22,32 @@ public class Map implements Serializable{
     public Map() {
     }
     
+    public Map(int numRows, int numColumns){
+        if(numRows < 1 || numColumns < 1){
+            System.out.println("The number of rows and oclumns must be > zero");
+            return;
+        }
+        
+        this.numRows = numRows;
+        this.numColumns = numColumns;
+        
+        //create 2-D array for Location objects
+        this.locations = new Location[numRows][numColumns];
+        
+        for(int row = 0; row < numRows; row++) {
+            for(int column = 0; column < numColumns; column++) {
+                //create and initialize new Location object instance
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                location.setVisited(false);
+                
+                //assign the Location object to the current position in array
+                locations[row][column] = location;
+            }
+        }
+    }
+    
     public void init(int rows, int cols) {
         numRows = rows;
         numColumns = cols;
