@@ -63,7 +63,6 @@ public class GameMenuView extends View {
         
         //TODO iterate over the map and display locations
         
-        
         Location playerLocation = EscapeGame.getPlayer().getLocation();
         System.out.println("You are at location (" + playerLocation.getRow() + ", " + playerLocation.getColumn() + ")");
         System.out.println(playerLocation.getDescription());
