@@ -16,115 +16,123 @@ import java.util.Scanner;
 public class StartProgramView {
 
     private String promptMessage;
-    
+
     public StartProgramView() {
         //promptMessage: "Please enter your name:"
         this.promptMessage = "\nPlease enter your name: ";
         //display banner when view is created
-        this.displayBanner(); 
+        this.displayBanner();
     }
-    
+
     private void displayBanner() {
-       
+
         System.out.println(
-        "\n********************************************************************"
-      + "\n*                                                                  *"
-      + "\n* Welcome to Escape from Chateau do la Miserie!                    *"
-      + "\n*                                                                  *"          
-      + "\n* In 1825, you were sent to the Chateau de la Misererie (Prison).  *"
-      + "\n* The warden knows you are innocent, but he is paid well to keep   *"
-      + "\n* his prisoners regardless of guilt or innocence. You will likely  *"
-      + "\n* die here unless you find a way to escape.                        *" 
-      + "\n*                                                                  *"          
-      + "\n* Your prison cell is small with a window high in the wall and a   *"
-      + "\n* small opening at the base of the door where guards deposit food. *" 
-      + "\n* You must figure out a way to escape using whatever characters and*"
-      + "\n* items you can find. If you are caught by the warden, you will be *"
-      + "\n* sent back to your cell. You have ten lives before you die and the*"
-      + "\n* game restarts. If you get outside the walls of prison, you win!  *"
-      + "\n*                                                                  *"
-      + "\n* Good Luck!                                                       *" 
-      + "\n*                                                                  *"
-      + "\n********************************************************************"
+                "\n********************************************************************"
+                + "\n*                                                                  *"
+                + "\n* Welcome to Escape from Chateau do la Miserie!                    *"
+                + "\n*                                                                  *"
+                + "\n* In 1825, you were sent to the Chateau de la Misererie (Prison).  *"
+                + "\n* The warden knows you are innocent, but he is paid well to keep   *"
+                + "\n* his prisoners regardless of guilt or innocence. You will likely  *"
+                + "\n* die here unless you find a way to escape.                        *"
+                + "\n*                                                                  *"
+                + "\n* Your prison cell is small with a window high in the wall and a   *"
+                + "\n* small opening at the base of the door where guards deposit food. *"
+                + "\n* You must figure out a way to escape using whatever characters and*"
+                + "\n* items you can find. If you are caught by the warden, you will be *"
+                + "\n* sent back to your cell. You have ten lives before you die and the*"
+                + "\n* game restarts. If you get outside the walls of prison, you win!  *"
+                + "\n*                                                                  *"
+                + "\n* Good Luck!                                                       *"
+                + "\n*                                                                  *"
+                + "\n********************************************************************"
         );
     }
 
     public void displayStartProgramView() {
-        
+
         boolean done = false;
-        do{
+        do {
             //prompt for and get players name
-           String playersName = this.getPlayersName();
-           if (playersName.toUpperCase().equals("Q")) //user wants to quit
-               return; //exit the game
-           
-           //do the requested action and display the next view
-           done = this.doAction(playersName);
-           
+            String playersName = this.getPlayersName();
+            if (playersName.toUpperCase().equals("Q")) //user wants to quit
+            {
+                return; //exit the game
+            }
+            //do the requested action and display the next view
+            done = this.doAction(playersName);
+
         } while (!done);
     }
 
     private String getPlayersName() {
-   
+
         Scanner keyboard = new Scanner(System.in); //get infile for keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not valid
-        
+
         while (!valid) {//loop while an invalid value is enter
             System.out.println("\n" + this.promptMessage);
-            
+
             value = keyboard.nextLine(); //get next line typed on keyboard
             value = value.trim(); //trim off leading and trailing blanks
-            
-            if (value.length() < 1){ //value is blank
+
+            if (value.length() < 1) { //value is blank
                 System.out.println("\nInvalid value: value cannot be blank");
                 continue;
             }
-            
+
             break; //end the loop
         }
-        
+
         return value; //return the value entered
     }
 
-    private boolean doAction(String playersName){
-        
-        if (playersName.length() < 2){
+    private boolean doAction(String playersName) {
+
+        if (playersName.length() < 2) {
             System.out.println("\nInvalid players name; "
-                   + "The name must be greater than one character in length");
+                    + "The name must be greater than one character in length");
             return false;
         }
-        
+
         //call createPlayer() control function
         Player player = GameControl.createPlayer(playersName);
-        
+
         if (player == null) {
             System.out.println("\nError creating the player.");
             return false;
         }
-        
+
         //display next view
         this.displayNextView(player);
-        
+
         return true; //success!
     }
 
     private void displayNextView(Player player) {
-        
+
         //display a custom welcome message
         System.out.println("\n========================================="
-                         +"\n Welcome to the game " + player.getName()
-                         +"\n We hope you have a lot of fun!"
-                         +"\n=========================================="
-                         );
-        
+                + "\n Welcome to the game " + player.getName()
+                + "\n We hope you have a lot of fun!"
+                + "\n=========================================="
+        );
+
         //Create MainMenuView object
         MainMenuView mainMenuView = new MainMenuView();
-                
+
         //Display the main menu view
         mainMenuView.displayMainMenuView();
-        
-        
+
     }
+
     }
     
+
+
+    private void displayNextView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
+
