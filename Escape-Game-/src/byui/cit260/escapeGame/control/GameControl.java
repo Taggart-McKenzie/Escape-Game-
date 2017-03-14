@@ -25,12 +25,16 @@ public class GameControl {
         Map map = new Map();
         map.init(5, 5);
         
+        game.setMap(map);
+        
         //TODO initialize items for the game and add them to the locations in the map
         
         //TODO initialize the puzzles for the game and add them to the locations in the map
         
         //set the player starting location
-        player.setLocation(map.getLocationAt(0, 0));
+        player.setLocation(map.getLocationAt(1, 0));
+        
+        EscapeGame.setCurrentGame(game);
     }
 
     public static Player createPlayer(String playersName) {

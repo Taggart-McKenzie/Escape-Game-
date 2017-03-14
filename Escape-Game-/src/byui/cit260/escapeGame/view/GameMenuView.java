@@ -5,6 +5,7 @@
  */
 package byui.cit260.escapeGame.view;
 
+import byui.cit260.escapeGame.control.ActionControl;
 import byui.cit260.escapeGame.model.Location;
 import escape.game.EscapeGame;
 
@@ -42,6 +43,14 @@ public class GameMenuView extends View {
                 break;
             case "V"://view health of player
                 this.viewHealth();
+                break;
+            case "U":
+                ActionControl ac = new ActionControl();
+                if(ac.moveUp()) {
+                    System.out.println("You moved up!");
+                } else {
+                    System.out.println("You cannot move up right now");
+                }
                 break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");

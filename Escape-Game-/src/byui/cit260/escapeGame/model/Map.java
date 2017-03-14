@@ -37,6 +37,14 @@ public class Map implements Serializable{
         locations[0][0] = prisonCell;
         
         
+        Location hallway = new Location();
+        hallway.setRow(1);
+        hallway.setColumn(0);
+        hallway.setDescription("Just a boring hallway");
+        hallway.setAbbreviation("H");
+        
+        locations[1][0] = hallway;
+        
         //TODO Add more locations to the map so all 25 map positions are filled
     }
 

@@ -5,27 +5,29 @@
  */
 package byui.cit260.escapeGame.control;
 
+import byui.cit260.escapeGame.model.Location;
+import escape.game.EscapeGame;
+
 /**
  *
  * @author samanthabrown
  */
 public class ActionControl {
 
-    public int moveUp(int location) {
+    public boolean moveUp() {
         
         //Grab the player's current location
-        
+        Location current = EscapeGame.getPlayer().getLocation();
         //Check to see if the current row is 0, if it is, don't let the player move up (return "false")
-        
+        if(current.getRow() == 0) {
+            return false;
+        }
         //Grab the location from the map that is one row less than player's current location row
-        
+        Location future = EscapeGame.getCurrentGame().getMap().getLocationAt(current.getRow() - 1, current.getColumn());
         //Set the player's current location to that new location
-        
+        EscapeGame.getPlayer().setLocation(future);
         //return "true"
-        int x = 0;
-        int nextLocation;
-        nextLocation = location + x;
-        return nextLocation;
+        return true;
     }
 
     public int moveDown(int location) {
