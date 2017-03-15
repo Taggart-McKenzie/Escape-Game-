@@ -29,6 +29,16 @@ public class ActionControl {
         //return "true"
         return true;
     }
+    public boolean moveDown() {
+        Location current = EscapeGame.getPlayer().getLocation();
+        if(current.getRow() == 4){
+            return false;
+        }
+        Location future = EscapeGame.getCurrentGame().getMap().getLocationAt(current.getRow() + 1, current.getColumn());
+        EscapeGame.getPlayer().setLocation(future);
+        return false;
+           
+    }
 
     public int moveDown(int location) {
         int x = 0;
