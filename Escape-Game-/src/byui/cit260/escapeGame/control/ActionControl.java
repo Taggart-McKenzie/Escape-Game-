@@ -47,23 +47,35 @@ public class ActionControl {
         return nextLocation;
     }
 
-    public int moveLeft(int location) {
-        int x = 0;
-        int nextLocation;
-        nextLocation = location + x;
-        return nextLocation;
+    public boolean moveLeft() {
+        //Grab the player's current location
+        Location current = EscapeGame.getPlayer().getLocation();
+        //Check to see if the current column is 0, if it is, don't let the player move left (return "false")
+        if(current.getColumn() == 0) {
+            return false;
+        }
+        //Grab the location from the map that is one row less than player's current location row
+        Location future = EscapeGame.getCurrentGame().getMap().getLocationAt(current.getColumn() - 1, current.getColumn());
+        //Set the player's current location to that new location
+        EscapeGame.getPlayer().setLocation(future);
+        //return "true"
+        return true;
     }
 
-    public int moveRight(int location) {
-        int x = 0;
-        int nextLocation;
-        nextLocation = location + x;
-        return nextLocation;
-    }
+    public boolean moveRight() {
 
-    public int goBack(int location) {
-        int prevLocation = location--;
-        return prevLocation;
+        //Grab the player's current location
+        Location current = EscapeGame.getPlayer().getLocation();
+        //Check to see if the current column is 4, if it is, don't let the player move right (return "false")
+        if(current.getColumn() == 4) {
+            return false;
+        }
+        //Grab the location from the map that is one row less than player's current location row
+        Location future = EscapeGame.getCurrentGame().getMap().getLocationAt(current.getColumn() + 1, current.getColumn());
+        //Set the player's current location to that new location
+        EscapeGame.getPlayer().setLocation(future);
+        //return "true"
+        return true;
     }
 
     public double pickUpItem(double problem, int item) {
