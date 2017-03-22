@@ -16,21 +16,17 @@ import java.util.Objects;
 public class Player implements Serializable{
     
     //classes instance variables
-    private String name;
-    private Location location;
+    private final String name;
+    private final Location location;
+    private final String description;
     private List<Clue> cluesFound;
     private int healthOfPlayer;
 
-    public Player() {
+    public Player(String description) {
+        this.description = description;
+           location = new Location(1,1);
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    Player
 
     public Location getLocation() {
         return location;

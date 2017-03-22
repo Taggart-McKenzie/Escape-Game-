@@ -9,25 +9,27 @@ package byui.cit260.escapeGame.exceptions;
  *
  * @author bruce
  */
-public class MainControl extends Exception{
+public class MainControlException extends Exception{
 
-    public MainControl() {
+    public MainControlException() {
     }
 
-    public MainControl(String message) {
+    public MainControlException(String message) {
         super(message);
     }
 
-    public MainControl(String message, Throwable cause) {
+    public MainControlException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public MainControl(Throwable cause) {
+    public MainControlException(Throwable cause) {
         super(cause);
     }
 
-    public MainControl(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public MainControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
+
+
     
 }

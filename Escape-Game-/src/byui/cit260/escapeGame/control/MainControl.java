@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package byui.cit260.escapeGame.control;
-
+import location.Location;
 /**
  *
  * @author mckenzietaggart
