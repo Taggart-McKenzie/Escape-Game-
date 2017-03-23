@@ -24,7 +24,7 @@ public class Map implements Serializable{
     
     public Map(int numRows, int numColumns){
         if(numRows < 1 || numColumns < 1){
-            System.out.println("The number of rows and oclumns must be > zero");
+            System.out.println("The number of rows and columns must be > zero");
             return;
         }
         

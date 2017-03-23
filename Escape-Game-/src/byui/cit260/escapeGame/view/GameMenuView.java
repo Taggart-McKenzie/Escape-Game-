@@ -8,6 +8,7 @@ package byui.cit260.escapeGame.view;
 import byui.cit260.escapeGame.control.ActionControl;
 import byui.cit260.escapeGame.model.Location;
 import escape.game.EscapeGame;
+import java.util.List;
 
 //TODO ADD MOVEMENT OPTIONS AND MAKE MOVEMENT WORK
 
@@ -63,7 +64,11 @@ public class GameMenuView extends View {
     private void viewMap() {
         
         //TODO iterate over the map and display locations
-        
+        for(List<String> valueList : map.values()) {
+  for(String value : valueList) {
+    
+  }
+}
         Location playerLocation = EscapeGame.getPlayer().getLocation();
         System.out.println("You are at location (" + playerLocation.getRow() + ", " + playerLocation.getColumn() + ")");
         System.out.println(playerLocation.getDescription());
