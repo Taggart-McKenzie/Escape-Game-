@@ -13,20 +13,38 @@ import java.util.Objects;
  *
  * @author mckenzietaggart
  */
-public class Player implements Serializable{
-    
+public class Player implements Serializable {
+
     //classes instance variables
-    private final String name;
-    private final Location location;
-    private final String description;
+    private String name;
+    private Location location;
+    private String description;
     private List<Clue> cluesFound;
     private int healthOfPlayer;
 
     public Player(String description) {
         this.description = description;
-           location = new Location(1,1);
     }
-    Player
+
+    public Player() {
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public Location getLocation() {
         return location;
@@ -89,6 +107,4 @@ public class Player implements Serializable{
         return true;
     }
 
-    
-    
 }
