@@ -65,7 +65,10 @@ public class GameControl {
         //TODO initialize the puzzles for the game and add them to the locations in the map
         //set the player starting location
         player.setLocation(map.getLocationAt(1, 0));
-
+        
+        Problem sfx = new Problem();
+        sfx.setItemType(ItemType.Solve For X);
+        sfx.setD
         EscapeGame.setCurrentGame(game);
     }
 

@@ -52,13 +52,51 @@ public class GameMenuView extends View {
                 this.pickUpItem();
                 break;
             case "U":
-                ActionControl ac = new ActionControl();
+                ActionControl mu = new ActionControl();
                 try {
-                    ac.moveUp();
+                    mu.moveUp();
                     System.out.println("You moved up!");
-                } catch (ActionControlException ace) {
+                } 
+                
+                
+                catch (ActionControlException ace) {
                     System.out.println(ace.getMessage());
                 }
+                break;
+            case "D":
+                ActionControl md = new ActionControl();
+                try {
+                    md.moveDown();
+                    System.out.println("You moved down!");
+                } 
+                
+                catch (ActionControlException ace) {
+                    System.out.println(ace.getMessage());
+                }
+                break;
+            case "L":
+                ActionControl ml = new ActionControl();
+                try{
+                    ml.moveLeft();
+                    System.out.println(ace.getMessage());
+                }
+                catch (ActionControlException ace) {
+                    System.out.println(ace.getMessage());
+                }
+                break;
+            case "R":
+                ActionControl mr = new ActionControl();
+                try{
+                    mr.moveRight();
+                    System.out.println(ace.getMessage());
+                }
+                catch (ActionControlException ace) {
+                    System.out.println(ace.getMessage());
+                }
+                
+                
+         
+            
 
                 break;
             default:
