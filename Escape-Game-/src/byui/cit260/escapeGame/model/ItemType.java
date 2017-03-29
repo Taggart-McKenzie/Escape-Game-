@@ -10,8 +10,9 @@ package byui.cit260.escapeGame.model;
  * @author Daniel
  */
 public enum ItemType {
-    Book,
-    Key,
     Stick,
-    Coffin;
+    Bowl,
+    Coffin,
+    Keys;
+    Book;
 }

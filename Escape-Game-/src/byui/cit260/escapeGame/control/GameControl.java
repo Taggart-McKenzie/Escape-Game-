@@ -32,12 +32,35 @@ public class GameControl {
         //TODO initialize items for the game and add them to the locations in the map
         
         //Create a new item
-        Item sample = new Item();
+        Item sti = new Item();
         //Set it's properties
-        sample.setItemType(ItemType.Stick);
-        sample.setDescription("It's just a boring stick");
+        sti.setItemType(ItemType.Stick);
+        sti.setDescription("It's just a boring stick");
         //Get a location in the map and set the item to the new item we created
-        map.getLocationAt(0, 0).setItem(sample);
+        map.getLocationAt(3, 5).setItem(sti);
+        
+        Item bow = new Item();
+        bow.setItemType(ItemType.Bowl);
+        bow.setDescription("Here is a small bowl");
+        map.getLocationAt(2, 2).setItem(bow);
+        
+        Item cof= new Item();
+        cof.setItemType(ItemType.Coffin);
+        cof.setDescription("It appears to be a coffin");
+        map.getLocationAt(4, 5).setItem(cof);
+        
+        Item key= new Item();
+        key.setItemType(ItemType.Keys);
+        key.setDescription("It appears to be a set of keys");
+        map.getLocationAt(2, 5).setItem(key);
+        
+        Item boo= new Item();
+        boo.setItemType(ItemType.Book);
+        boo.setDescription("It appears to be a book");
+        map.getLocationAt(4, 3).setItem(boo);
+        
+        
+        
 
         //TODO initialize the puzzles for the game and add them to the locations in the map
         //set the player starting location
