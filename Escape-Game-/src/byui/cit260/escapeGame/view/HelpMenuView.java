@@ -8,9 +8,7 @@ package byui.cit260.escapeGame.view;
 import java.awt.Graphics;
 import java.awt.Shape;
 import java.util.Scanner;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.Position;
-import javax.swing.text.View;
+
 
 /**
  *

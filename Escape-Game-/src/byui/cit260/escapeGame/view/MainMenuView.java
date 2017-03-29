@@ -8,12 +8,8 @@ package byui.cit260.escapeGame.view;
 import byui.cit260.escapeGame.control.GameControl;
 import byui.cit260.escapeGame.model.Player;
 import escape.game.EscapeGame;
-import java.awt.Graphics;
-import java.awt.Shape;
 import java.util.Scanner;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.Position;
-import javax.swing.text.View;
+
 
 /**
  *
@@ -88,28 +84,7 @@ public class MainMenuView extends View {
         HelpMenuView hmv = new HelpMenuView();
         hmv.display();
     }
-
-    @Override
-    public float getPreferredSpan(int axis) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   
     }
 
-    @Override
-    public void paint(Graphics g, Shape allocation) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Shape modelToView(int pos, Shape a, Position.Bias b) throws BadLocationException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public int viewToModel(float x, float y, Shape a, Position.Bias[] biasReturn) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void display() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}
+    
