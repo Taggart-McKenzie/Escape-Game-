@@ -5,6 +5,7 @@
  */
 package byui.cit260.escapeGame.control;
 
+import byui.cit260.escapeGame.exceptions.ActionControlException;
 import byui.cit260.escapeGame.model.Location;
 import escape.game.EscapeGame;
 
@@ -14,13 +15,13 @@ import escape.game.EscapeGame;
  */
 public class ActionControl {
 
-    public boolean moveUp() {
-        
+    public boolean moveUp() throws ActionControlException {
+
         //Grab the player's current location
         Location current = EscapeGame.getPlayer().getLocation();
         //Check to see if the current row is 0, if it is, don't let the player move up (return "false")
-        if(current.getRow() == 0) {
-            return false;
+        if (current.getRow() == 0) {
+            throw new ActionControlException("You can't move up right now");
         }
         //Grab the location from the map that is one row less than player's current location row
         Location future = EscapeGame.getCurrentGame().getMap().getLocationAt(current.getRow() - 1, current.getColumn());
@@ -29,15 +30,16 @@ public class ActionControl {
         //return "true"
         return true;
     }
+
     public boolean moveDown() {
         Location current = EscapeGame.getPlayer().getLocation();
-        if(current.getRow() == 4){
+        if (current.getRow() == 4) {
             return false;
         }
         Location future = EscapeGame.getCurrentGame().getMap().getLocationAt(current.getRow() + 1, current.getColumn());
         EscapeGame.getPlayer().setLocation(future);
         return false;
-           
+
     }
 
     public int moveDown(int location) {
@@ -51,7 +53,7 @@ public class ActionControl {
         //Grab the player's current location
         Location current = EscapeGame.getPlayer().getLocation();
         //Check to see if the current column is 0, if it is, don't let the player move left (return "false")
-        if(current.getColumn() == 0) {
+        if (current.getColumn() == 0) {
             return false;
         }
         //Grab the location from the map that is one row less than player's current location row
@@ -67,7 +69,7 @@ public class ActionControl {
         //Grab the player's current location
         Location current = EscapeGame.getPlayer().getLocation();
         //Check to see if the current column is 4, if it is, don't let the player move right (return "false")
-        if(current.getColumn() == 4) {
+        if (current.getColumn() == 4) {
             return false;
         }
         //Grab the location from the map that is one row less than player's current location row

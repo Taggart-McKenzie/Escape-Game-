@@ -6,6 +6,7 @@
 package byui.cit260.escapeGame.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,13 +22,23 @@ public class Player implements Serializable {
     private String description;
     private List<Clue> cluesFound;
     private int healthOfPlayer;
+    private List<Item> items;
 
     public Player(String description) {
         this.description = description;
     }
 
     public Player() {
+        items = new ArrayList<>();
+        cluesFound = new ArrayList<>();
+    }
 
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
     }
 
     public String getName() {

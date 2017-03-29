@@ -18,20 +18,7 @@ public class Game implements Serializable {
     private Player player;
     private Map map;
     private int numberOfTurns;
-    public Item[] getItem() {
-        return item;
-    }
-
-    public void setItem(Item[] item) {
-        this.item = item;
-    }
-    private Item[] item;
-    private Stick stick;
-    Private Bowl bowl;
-    Private Coffin coffin;
-    Private Keys keys;
-    Private Book book;
-
+    
     public Game() {
     }
 
