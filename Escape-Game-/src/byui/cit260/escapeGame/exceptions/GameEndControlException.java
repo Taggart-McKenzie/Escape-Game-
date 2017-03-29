@@ -9,7 +9,7 @@ package byui.cit260.escapeGame.exceptions;
  *
  * @author samanthabrown
  */
-public class GameEndControlException extends Exception{
+public class GameEndControlException extends Exception {
 
     public GameEndControlException() {
     }
@@ -29,5 +29,5 @@ public class GameEndControlException extends Exception{
     public GameEndControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
-    
+
 }

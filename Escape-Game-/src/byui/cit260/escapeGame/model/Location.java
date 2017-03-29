@@ -23,8 +23,9 @@ public class Location implements Serializable {
     private Problem problem;
     private boolean visited;
     private Location[][] location;
+
     public Location() {
-        
+
     }
 
     public Location(int row, int column, String description, String abbreviation, Item item, Problem problem, boolean visited) {

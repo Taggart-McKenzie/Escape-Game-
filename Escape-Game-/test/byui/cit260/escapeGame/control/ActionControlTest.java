@@ -5,20 +5,18 @@
  */
 package byui.cit260.escapeGame.control;
 
-
 import org.junit.Test;
 import static org.junit.Assert.*;
-
 
 /**
  *
  * @author mckenzietaggart
  */
 public class ActionControlTest {
-    
+
     public ActionControlTest() {
     }
-    
+
     /**
      * Test of moveUp method, of class ActionControl.
      */
@@ -31,7 +29,7 @@ public class ActionControlTest {
 //        int result = instance.moveUp(location);
 //        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
- 
+
     }
 
     /**
@@ -116,7 +114,7 @@ public class ActionControlTest {
     @Test
     public void testUseItem() {
         System.out.println("useItem");
-         String item;
+        String item;
         item = "";
         ActionControl instance = new ActionControl();
         String expResult = "";
@@ -158,7 +156,6 @@ public class ActionControlTest {
         // TODO review the generated test code and remove the default call to fail.
 
     }
-    
 
     /**
      * Test of quit method, of class ActionControl.
@@ -172,8 +169,9 @@ public class ActionControlTest {
         boolean result = instance.quit(answer);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-       
+
     }
+
     /**
      * Test of solveCube method, of class ActionControl.
      */
@@ -189,7 +187,7 @@ public class ActionControlTest {
         double result = instance.solveCube(base, height, length);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-      
+
     }
 
     /**
@@ -205,7 +203,7 @@ public class ActionControlTest {
         double result = instance.solvePower(x);
         assertEquals(expResult, result, 1.0);
         // TODO review the generated test code and remove the default call to fail.
-     
+
     }
-    
+
 }

@@ -9,7 +9,7 @@ package byui.cit260.escapeGame.exceptions;
  *
  * @author samanthabrown
  */
-public class HelpControlException extends Exception{
+public class HelpControlException extends Exception {
 
     public HelpControlException() {
     }
@@ -29,5 +29,5 @@ public class HelpControlException extends Exception{
     public HelpControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
-    
+
 }

@@ -12,16 +12,14 @@ import java.util.Objects;
  *
  * @author samanthabrown
  */
-public class Characters implements Serializable{
-    
+public class Characters implements Serializable {
+
     //class instance variables
     private String warden;
     private String prisoner;
 
     public Characters() {
     }
-    
-    
 
     public String getWarden() {
         return warden;
@@ -51,8 +49,7 @@ public class Characters implements Serializable{
     public String toString() {
         return "Characters{" + "warden=" + warden + ", prisoner=" + prisoner + '}';
     }
-    
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -73,7 +70,5 @@ public class Characters implements Serializable{
         }
         return true;
     }
-    
-    
-    
+
 }

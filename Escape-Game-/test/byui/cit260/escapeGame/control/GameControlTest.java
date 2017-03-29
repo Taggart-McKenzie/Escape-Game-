@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  * @author mckenzietaggart
  */
 public class GameControlTest {
-    
+
     public GameControlTest() {
     }
 
@@ -44,7 +44,7 @@ public class GameControlTest {
         String result = instance.viewMap(map);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-      
+
     }
 
     /**
@@ -89,7 +89,7 @@ public class GameControlTest {
         boolean result = instance.quit(answer);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-      
+
     }
-    
+
 }

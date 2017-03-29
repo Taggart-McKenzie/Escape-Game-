@@ -9,7 +9,7 @@ package byui.cit260.escapeGame.exceptions;
  *
  * @author samanthabrown
  */
-public class ActionControlException extends Exception{
+public class ActionControlException extends Exception {
 
     public ActionControlException() {
     }

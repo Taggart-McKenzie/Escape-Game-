@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  * @author mckenzietaggart
  */
 public class HelpControlTest {
-    
+
     public HelpControlTest() {
     }
 
@@ -29,7 +29,7 @@ public class HelpControlTest {
         String result = instance.clue(clue);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        
+
     }
 
     /**
@@ -44,7 +44,7 @@ public class HelpControlTest {
         String result = instance.rules(rules);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        
+
     }
 
     /**
@@ -59,7 +59,7 @@ public class HelpControlTest {
         int result = instance.movement(actionControl);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        
+
     }
 
     /**
@@ -74,7 +74,7 @@ public class HelpControlTest {
         String result = instance.lookAround(map);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-      
+
     }
 
     /**
@@ -89,7 +89,7 @@ public class HelpControlTest {
         String result = instance.usefulItems(item);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-       
+
     }
 
     /**
@@ -104,7 +104,7 @@ public class HelpControlTest {
         boolean result = instance.quit(answer);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-       
+
     }
-    
+
 }
