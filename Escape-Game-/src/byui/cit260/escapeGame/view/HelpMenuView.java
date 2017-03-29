@@ -14,7 +14,7 @@ import javax.swing.text.View;
 
 /**
  *
- * @author mckenzietaggart
+ * @author Brown and Groesbeck
  */
 public class HelpMenuView extends View {
 
@@ -97,6 +97,10 @@ public class HelpMenuView extends View {
 
     @Override
     public int viewToModel(float x, float y, Shape a, Position.Bias[] biasReturn) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void display() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
