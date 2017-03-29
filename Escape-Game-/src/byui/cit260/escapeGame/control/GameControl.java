@@ -28,6 +28,11 @@ public class GameControl {
         game.setMap(map);
         
         //TODO initialize items for the game and add them to the locations in the map
+      
+        
+        item.setItem(book);
+        map.init (1, 4);
+        
         
         //TODO initialize the puzzles for the game and add them to the locations in the map
         
