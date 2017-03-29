@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  * @author mckenzietaggart
  */
 public class MainControlTest {
-    
+
     public MainControlTest() {
     }
 
@@ -29,7 +29,7 @@ public class MainControlTest {
         String result = instance.saveGame(name);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-      
+
     }
 
     /**
@@ -44,7 +44,7 @@ public class MainControlTest {
         String result = instance.newGame(name);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-       
+
     }
 
     /**
@@ -59,7 +59,7 @@ public class MainControlTest {
         String result = instance.loadSavedGame(name);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-       
+
     }
 
     /**
@@ -90,5 +90,5 @@ public class MainControlTest {
         assertEquals(expResult, result);
 
     }
-    
+
 }

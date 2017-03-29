@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  * @author mckenzietaggart
  */
 public class StartControlTest {
-    
+
     public StartControlTest() {
     }
 
@@ -29,7 +29,7 @@ public class StartControlTest {
         String result = instance.openGame(mainControl);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-  
+
     }
-    
+
 }

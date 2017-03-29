@@ -25,7 +25,7 @@ public class EscapeGame {
      * @param args the command line arguments
      */
     private static Game currentGame = null;
-    private static Player player  = null;
+    private static Player player = null;
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -42,13 +42,13 @@ public class EscapeGame {
     public static void setPlayer(Player player) {
         EscapeGame.player = player;
     }
-    
+
     public static void main(String[] args) {
-        
+
         //create StartProgramViewOrig and display the start program view
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
-        
+
     }
-    
+
 }

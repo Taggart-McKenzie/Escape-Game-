@@ -12,14 +12,14 @@ import java.util.Objects;
  *
  * @author mckenzietaggart
  */
-public class Item implements Serializable{
-    
+public class Item implements Serializable {
+
     //class instance variables
     private String description;
     private ItemType itemType;
 
     public Item() {
-    }    
+    }
 
     public String getDescription() {
         return description;
@@ -36,5 +36,5 @@ public class Item implements Serializable{
     public void setItemType(ItemType itemType) {
         this.itemType = itemType;
     }
-    
+
 }

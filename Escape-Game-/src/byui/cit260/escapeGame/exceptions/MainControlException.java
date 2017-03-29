@@ -9,7 +9,7 @@ package byui.cit260.escapeGame.exceptions;
  *
  * @author bruce
  */
-public class MainControlException extends Exception{
+public class MainControlException extends Exception {
 
     public MainControlException() {
     }
@@ -30,6 +30,4 @@ public class MainControlException extends Exception{
         super(message, cause, enableSuppression, writableStackTrace);
     }
 
-
-    
 }

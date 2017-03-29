@@ -11,8 +11,8 @@ import java.io.Serializable;
  *
  * @author mckenzietaggart
  */
-public class Problem implements Serializable{
-    
+public class Problem implements Serializable {
+
     //class instance variables
     private int solveForX;
     private int solveTriangle;
@@ -21,8 +21,6 @@ public class Problem implements Serializable{
 
     public Problem() {
     }
-    
-    
 
     public int getSolveForX() {
         return solveForX;
@@ -70,7 +68,7 @@ public class Problem implements Serializable{
     public String toString() {
         return "Problem{" + "solveForX=" + solveForX + ", solveTriangle=" + solveTriangle + ", solveCube=" + solveCube + ", solvePower=" + solvePower + '}';
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -97,6 +95,5 @@ public class Problem implements Serializable{
         }
         return true;
     }
-    
-    
+
 }

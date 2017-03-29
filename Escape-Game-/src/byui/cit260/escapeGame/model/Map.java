@@ -12,8 +12,8 @@ import java.util.Arrays;
  *
  * @author mckenzietaggart
  */
-public class Map implements Serializable{
-    
+public class Map implements Serializable {
+
     //class imstance variables
     private int numRows;
     private int numColumns;
@@ -21,54 +21,53 @@ public class Map implements Serializable{
 
     public Map() {
     }
-    
-    public Map(int numRows, int numColumns){
-        if(numRows < 1 || numColumns < 1){
+
+    public Map(int numRows, int numColumns) {
+        if (numRows < 1 || numColumns < 1) {
             System.out.println("The number of rows and columns must be > zero");
             return;
         }
-        
+
         this.numRows = numRows;
         this.numColumns = numColumns;
-        
+
         //create 2-D array for Location objects
         this.locations = new Location[numRows][numColumns];
-        
-        for(int row = 0; row < numRows; row++) {
-            for(int column = 0; column < numColumns; column++) {
+
+        for (int row = 0; row < numRows; row++) {
+            for (int column = 0; column < numColumns; column++) {
                 //create and initialize new Location object instance
                 Location location = new Location();
                 location.setColumn(column);
                 location.setRow(row);
                 location.setVisited(false);
-                
+
                 //assign the Location object to the current position in array
                 locations[row][column] = location;
             }
         }
     }
-    
+
     public void init(int rows, int cols) {
         numRows = rows;
         numColumns = cols;
-        
+
         locations = new Location[numRows][numColumns];
-        
+
         Location prisonCell = new Location();
         prisonCell.setRow(0);
         prisonCell.setColumn(0);
         prisonCell.setDescription("You are in a dark prison cell.");
         prisonCell.setAbbreviation("C");
-        
+
         locations[0][0] = prisonCell;
-        
-        
+
         Location hallway = new Location();
         hallway.setRow(1);
         hallway.setColumn(0);
         hallway.setDescription("Just a boring hallway");
         hallway.setAbbreviation("H");
-        
+
         locations[0][1] = hallway;
         locations[0][2] = hallway;
         locations[0][3] = hallway;
@@ -89,45 +88,45 @@ public class Map implements Serializable{
         locations[4][1] = hallway;
         locations[4][2] = hallway;
         locations[4][3] = hallway;
-       
+
         Location kitchen = new Location();
         kitchen.setRow(0);
         kitchen.setColumn(4);
         kitchen.setDescription("You are Standing in the Kitchen");
         kitchen.setAbbreviation("K");
-        
-        locations [0][4] = kitchen;
-        
+
+        locations[0][4] = kitchen;
+
         Location morgue = new Location();
         morgue.setRow(4);
         morgue.setColumn(4);
         morgue.setDescription("You are standing in the Morgue");
         morgue.setAbbreviation("M");
-        
-        locations [4][4] = morgue;
-       
+
+        locations[4][4] = morgue;
+
         Location office = new Location();
         office.setRow(4);
         office.setColumn(0);
         office.setDescription("You are standing in the Wardens Office");
         office.setDescription("O");
-        
-        locations [4][0] = office;
-        
+
+        locations[4][0] = office;
+
         Location bathroom = new Location();
         bathroom.setRow(2);
         bathroom.setColumn(2);
         bathroom.setDescription("You are standing in the Bathroom");
         bathroom.setAbbreviation("B");
-        
-        locations [2][2] = bathroom;
-       //TODO Add more locations to the map so all 25 map positions are filled
+
+        locations[2][2] = bathroom;
+        //TODO Add more locations to the map so all 25 map positions are filled
     }
 
     public Location getLocationAt(int row, int col) {
         return locations[row][col];
     }
-    
+
     public int getNumRows() {
         return numRows;
     }
@@ -184,6 +183,5 @@ public class Map implements Serializable{
         }
         return true;
     }
-    
-    
+
 }

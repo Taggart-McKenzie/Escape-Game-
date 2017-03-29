@@ -30,7 +30,6 @@ public class GameControl {
         game.setMap(map);
 
         //TODO initialize items for the game and add them to the locations in the map
-        
         //Create a new item
         Item sti = new Item();
         //Set it's properties

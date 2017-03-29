@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  * @author mckenzietaggart
  */
 public class GameEndControlTest {
-    
+
     public GameEndControlTest() {
     }
 
@@ -50,5 +50,5 @@ public class GameEndControlTest {
         // TODO review the generated test code and remove the default call to fail.
 
     }
-    
+
 }

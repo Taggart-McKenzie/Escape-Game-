@@ -9,8 +9,7 @@ package byui.cit260.escapeGame.exceptions;
  *
  * @author samanthabrown
  */
-
-public class StartControlException extends Exception{
+public class StartControlException extends Exception {
 
     public StartControlException() {
     }
@@ -30,5 +29,5 @@ public class StartControlException extends Exception{
     public StartControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
-    
+
 }

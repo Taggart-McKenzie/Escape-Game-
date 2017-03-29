@@ -12,15 +12,13 @@ import java.util.Objects;
  *
  * @author samanthabrown
  */
-public class Clue implements Serializable{
-    
+public class Clue implements Serializable {
+
     //class instace variables
     private String cluesFound;
 
     public Clue() {
     }
-    
-    
 
     public String getCluesFound() {
         return cluesFound;
@@ -41,8 +39,7 @@ public class Clue implements Serializable{
     public String toString() {
         return "Clues{" + "cluesFound=" + cluesFound + '}';
     }
-    
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -60,6 +57,5 @@ public class Clue implements Serializable{
         }
         return true;
     }
-    
-    
+
 }
