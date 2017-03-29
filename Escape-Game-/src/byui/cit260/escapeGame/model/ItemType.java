@@ -13,6 +13,6 @@ public enum ItemType {
     Stick,
     Bowl,
     Coffin,
-    Keys;
-    Book;
+    Keys,
+    Book,
 }

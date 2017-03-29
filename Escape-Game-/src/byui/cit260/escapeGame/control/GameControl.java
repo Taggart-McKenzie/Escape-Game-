@@ -65,10 +65,7 @@ public class GameControl {
         //set the player starting location
         player.setLocation(map.getLocationAt(1, 0));
         
-        Problem sfx = new Problem();
-        sfx.setItemType(ItemType.Solve For X);
-        sfx.setD
-        EscapeGame.setCurrentGame(game);
+        
     }
 
     public static Player createPlayer(String playersName) {
