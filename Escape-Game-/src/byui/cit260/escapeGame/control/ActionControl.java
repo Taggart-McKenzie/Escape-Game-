@@ -31,7 +31,7 @@ public class ActionControl {
         return true;
     }
 
-    public boolean moveDown() {
+    public boolean moveDown() throws ActionControlException {
         Location current = EscapeGame.getPlayer().getLocation();
         if (current.getRow() == 4) {
             return false;
@@ -49,7 +49,7 @@ public class ActionControl {
         return nextLocation;
     }
 
-    public boolean moveLeft() {
+    public boolean moveLeft() throws ActionControlException {
         //Grab the player's current location
         Location current = EscapeGame.getPlayer().getLocation();
         //Check to see if the current column is 0, if it is, don't let the player move left (return "false")
@@ -64,7 +64,7 @@ public class ActionControl {
         return true;
     }
 
-    public boolean moveRight() {
+    public boolean moveRight() throws ActionControlException {
 
         //Grab the player's current location
         Location current = EscapeGame.getPlayer().getLocation();
