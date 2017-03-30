@@ -73,7 +73,7 @@ public class GameMenuView extends View {
                 ActionControl ml = new ActionControl();
                 try {
                     ml.moveLeft();
-                    System.out.println(ace.getMessage());
+                    
                 } catch (ActionControlException ace) {
                     System.out.println(ace.getMessage());
                 }
@@ -82,7 +82,7 @@ public class GameMenuView extends View {
                 ActionControl mr = new ActionControl();
                 try {
                     mr.moveRight();
-                    System.out.println(ace.getMessage());
+                    
                 } catch (ActionControlException ace) {
                     System.out.println(ace.getMessage());
                 }
