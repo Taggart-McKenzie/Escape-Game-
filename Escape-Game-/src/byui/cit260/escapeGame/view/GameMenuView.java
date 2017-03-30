@@ -56,10 +56,7 @@ public class GameMenuView extends View {
                 try {
                     mu.moveUp();
                     System.out.println("You moved up!");
-                } 
-                
-                
-                catch (ActionControlException ace) {
+                } catch (ActionControlException ace) {
                     System.out.println(ace.getMessage());
                 }
                 break;
@@ -68,35 +65,27 @@ public class GameMenuView extends View {
                 try {
                     md.moveDown();
                     System.out.println("You moved down!");
-                } 
-                
-                catch (ActionControlException ace) {
+                } catch (ActionControlException ace) {
                     System.out.println(ace.getMessage());
                 }
                 break;
             case "L":
                 ActionControl ml = new ActionControl();
-                try{
+                try {
                     ml.moveLeft();
                     System.out.println(ace.getMessage());
-                }
-                catch (ActionControlException ace) {
+                } catch (ActionControlException ace) {
                     System.out.println(ace.getMessage());
                 }
                 break;
             case "R":
                 ActionControl mr = new ActionControl();
-                try{
+                try {
                     mr.moveRight();
                     System.out.println(ace.getMessage());
-                }
-                catch (ActionControlException ace) {
+                } catch (ActionControlException ace) {
                     System.out.println(ace.getMessage());
                 }
-                
-                
-         
-            
 
                 break;
             default:
