@@ -5,6 +5,7 @@
  */
 package byui.cit260.escapeGame.view;
 
+import escape.game.EscapeGame;
 import java.io.PrintWriter;
 
 /**
@@ -13,8 +14,8 @@ import java.io.PrintWriter;
  */
 public class ErrorView {
   
-    private static final PrintWriter errorFile = Escape.getOutFile();
-    private static final PrintWriter logFile = Escape.getLogFile();
+    private static final PrintWriter errorFile = EscapeGame.getOutFile();
+    private static final PrintWriter logFile = EscapeGame.getLogFile();
     
     private static void display(String className, String errorMessage) {
         

@@ -5,6 +5,8 @@
  */
 package byui.cit260.escapeGame.view;
 
+import escape.game.EscapeGame;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
@@ -15,8 +17,8 @@ public abstract class View implements ViewInterface {
 
     protected String displayMessage;
     
-    protected final BufferReader keyboard = Escape.getInFile();
-    protected final PrintWriter console = Escape.getOutFile();
+    protected final BufferReader keyboard = EscapeGame.getInFile();
+    protected final PrintWriter console = EscapeGame.getOutFile();
 
     public View() {
 

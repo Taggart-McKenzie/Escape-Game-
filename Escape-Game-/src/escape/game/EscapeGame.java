@@ -35,13 +35,13 @@ public class EscapeGame {
     
     private static PrintWriter outFile = null;
     
-    private static PrinterWriter logFile = null;
+    private static PrintWriter logFile = null;
 
-    public static PrinterWriter getLogFile() {
+    public static PrintWriter getLogFile() {
         return logFile;
     }
 
-    public static void setLogFile(PrinterWriter logFile) {
+    public static void setLogFile(PrintWriter logFile) {
         EscapeGame.logFile = logFile;
     }
 
