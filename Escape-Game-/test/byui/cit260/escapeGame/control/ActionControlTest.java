@@ -162,7 +162,7 @@ public class ActionControlTest {
      */
     @Test
     public void testQuit() {
-        System.out.println("quit");
+        ErrorView.display.println("quit");
         boolean answer = false;
         ActionControl instance = new ActionControl();
         boolean expResult = false;
