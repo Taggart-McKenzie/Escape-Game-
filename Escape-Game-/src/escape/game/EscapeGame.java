@@ -34,6 +34,16 @@ public class EscapeGame {
     private static Player player = null;
     
     private static PrintWriter outFile = null;
+    
+    private static PrinterWriter logFile = null;
+
+    public static PrinterWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrinterWriter logFile) {
+        EscapeGame.logFile = logFile;
+    }
 
     public static PrintWriter getOutFile() {
         return outFile;
@@ -76,6 +86,9 @@ public class EscapeGame {
         
         Escape.outFile = new PrintWriter(System.out, true);
         //create StartProgramViewOrig and display the start program view
+        //open log file
+        String filePath = "log.txt";
+        Escape.logFile = new PrintWriter(filePath);
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
         return;
@@ -90,8 +103,12 @@ public class EscapeGame {
         try {
             if (Escape.inFile != null)
             Escape.inFile.close();
+            
             if (Escape.outFile != null)
             Escape.outFile.close();
+            
+            if (Escape.logFile != null)
+                Escape.logFile.close();
         } catch (IOException ex) {
             Logger.getLogger(EscapeGame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -104,6 +121,7 @@ public class EscapeGame {
 
         private static BufferedReader inFile;
         private static PrintWriter outFile;
+        private static PrintWriter logFile;
 
         public Escape() {
         }

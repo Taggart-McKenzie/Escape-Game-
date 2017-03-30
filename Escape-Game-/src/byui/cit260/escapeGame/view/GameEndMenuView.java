@@ -44,14 +44,14 @@ public class GameEndMenuView {
     }
 
     private String getEndMenuOption() {
-        Scanner keyboard = new Scanner(System.in); //get infile for keyboard
+         
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not valid
 
         while (!valid) {//loop while an invalid value is entered
             System.out.println("\n" + this.endMenu);
 
-            value = keyboard.nextLine(); //get next lin typed on keyboard
+            value = keyboard.readLine(); //get next lin typed on keyboard
             value = value.trim(); //trim off leading and trailing blanks
 
             if (value.length() < 1) { //value is blank
