@@ -14,6 +14,12 @@ import byui.cit260.escapeGame.model.Map;
 import byui.cit260.escapeGame.model.Player;
 import byui.cit260.escapeGame.model.Problem;
 import byui.cit260.escapeGame.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -26,6 +32,25 @@ public class EscapeGame {
      */
     private static Game currentGame = null;
     private static Player player = null;
+    
+    private static PrintWriter outFile = null;
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        EscapeGame.outFile = outFile;
+    }
+
+    public static BufferReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferReader inFile) {
+        EscapeGame.inFile = inFile;
+    }
+    private static BufferReader inFile = null;        
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -44,11 +69,44 @@ public class EscapeGame {
     }
 
     public static void main(String[] args) {
-
+        
+    try {    
+        Escape.inFile =
+                new BufferedReader (new InputStreamReader(System.in));
+        
+        Escape.outFile = new PrintWriter(System.out, true);
         //create StartProgramViewOrig and display the start program view
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
+        return;
+    } catch (Throwable e) {
+        
+        System.out.println("Exception: " + e.toString() +
+                           "\nCause:" + e.getCause() +
+                           "\nMessage:" + e.getMessage());
+        
+        e.printStackTrace();;
+    }finally {  
+        try {
+            if (Escape.inFile != null)
+            Escape.inFile.close();
+            if (Escape.outFile != null)
+            Escape.outFile.close();
+        } catch (IOException ex) {
+            Logger.getLogger(EscapeGame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Escape.outFile.close();
+    }
+    
+    }
 
+    private static class Escape {
+
+        private static BufferedReader inFile;
+        private static PrintWriter outFile;
+
+        public Escape() {
+        }
     }
 
 }
