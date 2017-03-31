@@ -18,7 +18,7 @@ public class Name {//Pass by Reference and Pass by Value
         john.age = 10;//pass by value
 
         System.out.println("John's age is " + john.age);
-        this..println("Samuel's age is " + samuel.age);//pass by reference
+        System.out.println("Samuel's age is " + samuel.age);//pass by reference
 
     }
     private int age;

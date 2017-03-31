@@ -52,7 +52,7 @@ public class GameEndMenuView extends View{
         boolean valid = false; //initialize to not valid
 
         while (!valid) {//loop while an invalid value is entered
-            System.out.println("\n" + this.endMenu);
+            this.console.println("\n" + this.endMenu);
 
             try {
                 value = keyboard.readLine(); //get next lin typed on keyboard
@@ -62,7 +62,7 @@ public class GameEndMenuView extends View{
             value = value.trim(); //trim off leading and trailing blanks
 
             if (value.length() < 1) { //value is blank
-                System.out.println("\nInvalid value; value cannot be blank");
+                this.console.println("\nInvalid value; value cannot be blank");
                 continue;
             }
 
@@ -84,21 +84,21 @@ public class GameEndMenuView extends View{
                 this.loseGame();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
         return false;
     }
 
     private void winGame() {
-        System.out.println("*** winGame function called ***");
+        this.console.println("*** winGame function called ***");
         //display the game end menu
         GameEndMenuView endMenu = new GameEndMenuView();
         endMenu.displayGameEndMenuView();
     }
 
     private void loseGame() {
-        System.out.println("*** loseGame funciton called ***");
+        this.console.println("*** loseGame funciton called ***");
         GameEndMenuView endMenu = new GameEndMenuView();
         endMenu.displayGameEndMenuView();
     }

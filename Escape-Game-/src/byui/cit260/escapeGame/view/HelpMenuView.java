@@ -52,30 +52,30 @@ public class HelpMenuView extends View {
                 this.getItems();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
         return false;
     }
 
     private void getRules() {
-        System.out.println("*** getRules function called ***");
+       this.console.println("*** getRules function called ***");
     }
 
     private void getClue() {
-        System.out.println("*** getClue function called ***");
+        this.console.println("*** getClue function called ***");
     }
 
     private void showMovement() {
-        System.out.println("*** showMovement function called ***");
+        this.console.println("*** showMovement function called ***");
     }
 
     private void lookAround() {
-        System.out.println("*** lookAround function called ***");
+        this.console.println("*** lookAround function called ***");
     }
 
     private void getItems() {
-        System.out.println("*** getItems function called ***");
+        this.console.println("*** getItems function called ***");
     }
 
     

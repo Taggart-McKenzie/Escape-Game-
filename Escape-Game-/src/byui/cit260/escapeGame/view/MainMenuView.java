@@ -53,14 +53,14 @@ public class MainMenuView extends View {
                 this.gameEndControl();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
         return false;
     }
 
     private void saveGame() {
-        System.out.println("*** saveGame function called***");
+        this.console.println("*** saveGame function called***");
     }
 
     private void newGame() {
@@ -73,11 +73,11 @@ public class MainMenuView extends View {
     }
 
     private void loadSavedGame() {
-        System.out.println("*** loadSavedGame function called ***");
+        this.console.println("*** loadSavedGame function called ***");
     }
 
     private void gameEndControl() {
-        System.out.println("***end function called ***");
+        this.console.println("***end function called ***");
     }
 
     private void help() {

@@ -12,7 +12,7 @@ import java.io.PrintWriter;
  *
  * @author bruce
  */
-public class ErrorView {
+public class ErrorView  {
   
     private static final PrintWriter errorFile = EscapeGame.getOutFile();
     private static final PrintWriter logFile = EscapeGame.getLogFile();
@@ -23,5 +23,7 @@ public class ErrorView {
                     "---------------------------------------------"
                    +"\n - ERROR - " + errorMessage
                    +"\n-------------------------------------------");
+    //log error
+    logFile.println(className + "_" + errorMessage);
     }
 }

@@ -33,7 +33,7 @@ public class StartProgramView extends View{
 
     private void displayBanner() {
 
-        System.out.println(
+        this.console.println(
                 "\n********************************************************************"
                 + "\n*                                                                  *"
                 + "\n* Welcome to Escape from Chateau do la Miserie!                    *"
@@ -79,7 +79,7 @@ public class StartProgramView extends View{
         boolean valid = false; //initialize to not valid
 
         while (!valid) {//loop while an invalid value is enter
-            System.out.println("\n" + this.promptMessage);
+            this.console.println("\n" + this.promptMessage);
 
             try {
                 value = keyboard.readLine(); //get next line typed on keyboard
@@ -89,7 +89,7 @@ public class StartProgramView extends View{
             value = value.trim(); //trim off leading and trailing blanks
 
             if (value.length() < 1) { //value is blank
-                System.out.println("\nInvalid value: value cannot be blank");
+                this.console.println("\nInvalid value: value cannot be blank");
                 continue;
             }
 
@@ -102,7 +102,7 @@ public class StartProgramView extends View{
     public boolean doAction(String playersName) {
 
         if (playersName.length() < 2) {
-            System.out.println("\nInvalid players name; "
+            this.console.println("\nInvalid players name; "
                     + "The name must be greater than one character in length");
             return false;
         }
@@ -111,7 +111,7 @@ public class StartProgramView extends View{
         Player player = GameControl.createPlayer(playersName);
 
         if (player == null) {
-            System.out.println("\nError creating the player.");
+           this.console.println("\nError creating the player.");
             return false;
         }
 
@@ -124,7 +124,7 @@ public class StartProgramView extends View{
     private void displayNextView(Player player) {
 
         //display a custom welcome message
-        System.out.println("\n========================================="
+        this.console.println("\n========================================="
                 + "\n Welcome to the game " + player.getName()
                 + "\n We hope you have a lot of fun!"
                 + "\n=========================================="

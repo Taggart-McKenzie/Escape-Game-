@@ -55,18 +55,18 @@ public class GameMenuView extends View {
                 ActionControl mu = new ActionControl();
                 try {
                     mu.moveUp();
-                    System.out.println("You moved up!");
+                    this.console.println("You moved up!");
                 } catch (ActionControlException ace) {
-                    System.out.println(ace.getMessage());
+                    this.console.println(ace.getMessage());
                 }
                 break;
             case "D":
                 ActionControl md = new ActionControl();
                 try {
                     md.moveDown();
-                    System.out.println("You moved down!");
+                    this.console.println("You moved down!");
                 } catch (ActionControlException ace) {
-                    System.out.println(ace.getMessage());
+                    this.console.println(ace.getMessage());
                 }
                 break;
             case "L":
@@ -75,7 +75,7 @@ public class GameMenuView extends View {
                     ml.moveLeft();
                     
                 } catch (ActionControlException ace) {
-                    System.out.println(ace.getMessage());
+                    this.console.println(ace.getMessage());
                 }
                 break;
             case "R":
@@ -84,12 +84,12 @@ public class GameMenuView extends View {
                     mr.moveRight();
                     
                 } catch (ActionControlException ace) {
-                    System.out.println(ace.getMessage());
+                    this.console.println(ace.getMessage());
                 }
 
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
                 break;
         }
         return false;
@@ -106,16 +106,16 @@ public class GameMenuView extends View {
         }
 
         Location playerLocation = EscapeGame.getPlayer().getLocation();
-        System.out.println("You are at location (" + playerLocation.getRow() + ", " + playerLocation.getColumn() + ")");
-        System.out.println(playerLocation.getDescription());
+        this.console.println("You are at location (" + playerLocation.getRow() + ", " + playerLocation.getColumn() + ")");
+        this.console.println(playerLocation.getDescription());
     }
 
     private void viewItem() {
-        System.out.println("*** viewItem function called");
+        this.console.println("*** viewItem function called");
     }
 
     private void viewHealth() {
-        System.out.println("*** viewHealth funciton called");
+        this.console.println("*** viewHealth funciton called");
     }
 
     private void pickUpItem() {
@@ -123,10 +123,10 @@ public class GameMenuView extends View {
         Item item = EscapeGame.getPlayer().getLocation().getItem();
 
         if (item == null) {
-            System.out.println("No item here");
+            this.console.println("No item here");
         } else {
-            System.out.println("You got a " + item.getItemType().toString());
-            System.out.println(item.getDescription());
+            this.console.println("You got a " + item.getItemType().toString());
+            this.console.println(item.getDescription());
             EscapeGame.getPlayer().getItems().add(item);
             EscapeGame.getPlayer().getLocation().setItem(null);
         }
