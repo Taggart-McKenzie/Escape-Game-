@@ -5,14 +5,8 @@
  */
 package escape.game;
 
-import byui.cit260.escapeGame.model.Characters;
-import byui.cit260.escapeGame.model.Clue;
 import byui.cit260.escapeGame.model.Game;
-import byui.cit260.escapeGame.model.Item;
-import byui.cit260.escapeGame.model.Location;
-import byui.cit260.escapeGame.model.Map;
 import byui.cit260.escapeGame.model.Player;
-import byui.cit260.escapeGame.model.Problem;
 import byui.cit260.escapeGame.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,10 +26,12 @@ public class EscapeGame {
      */
     private static Game currentGame = null;
     private static Player player = null;
-    
+
     private static PrintWriter outFile = null;
-    
+
     private static PrintWriter logFile = null;
+
+    private static BufferedReader inFile = null;
 
     public static PrintWriter getLogFile() {
         return logFile;
@@ -53,14 +49,13 @@ public class EscapeGame {
         EscapeGame.outFile = outFile;
     }
 
-    public static BufferReader getInFile() {
+    public static BufferedReader getInFile() {
         return inFile;
     }
 
-    public static void setInFile(BufferReader inFile) {
+    public static void setInFile(BufferedReader inFile) {
         EscapeGame.inFile = inFile;
     }
-    private static BufferReader inFile = null;        
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -79,52 +74,44 @@ public class EscapeGame {
     }
 
     public static void main(String[] args) {
-        
-    try {    
-        Escape.inFile =
-                new BufferedReader (new InputStreamReader(System.in));
-        
-        Escape.outFile = new PrintWriter(System.out, true);
-        //create StartProgramViewOrig and display the start program view
-        //open log file
-        String filePath = "log.txt";
-        Escape.logFile = new PrintWriter(filePath);
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.displayStartProgramView();
-        return;
-    } catch (Throwable e) {
-        
-        System.out.println("Exception: " + e.toString() +
-                           "\nCause:" + e.getCause() +
-                           "\nMessage:" + e.getMessage());
-        
-        e.printStackTrace();;
-    }finally {  
+
         try {
-            if (Escape.inFile != null)
-            Escape.inFile.close();
-            
-            if (Escape.outFile != null)
-            Escape.outFile.close();
-            
-            if (Escape.logFile != null)
-                Escape.logFile.close();
-        } catch (IOException ex) {
-            Logger.getLogger(EscapeGame.class.getName()).log(Level.SEVERE, null, ex);
+            inFile = new BufferedReader(new InputStreamReader(System.in));
+
+            outFile = new PrintWriter(System.out, true);
+            //create StartProgramViewOrig and display the start program view
+            //open log file
+            String filePath = "log.txt";
+            logFile = new PrintWriter(filePath);
+            StartProgramView startProgramView = new StartProgramView();
+            startProgramView.displayStartProgramView();
+            return;
+        } catch (Throwable e) {
+
+            System.out.println("Exception: " + e.toString()
+                    + "\nCause:" + e.getCause()
+                    + "\nMessage:" + e.getMessage());
+
+            e.printStackTrace();;
+        } finally {
+            try {
+                if (inFile != null) {
+                    inFile.close();
+                }
+
+                if (outFile != null) {
+                    outFile.close();
+                }
+
+                if (logFile != null) {
+                    logFile.close();
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(EscapeGame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            outFile.close();
         }
-        Escape.outFile.close();
-    }
-    
-    }
 
-    private static class Escape {
-
-        private static BufferedReader inFile;
-        private static PrintWriter outFile;
-        private static PrintWriter logFile;
-
-        public Escape() {
-        }
     }
 
 }

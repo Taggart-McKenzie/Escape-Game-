@@ -6,8 +6,12 @@
 package byui.cit260.escapeGame.view;
 
 import escape.game.EscapeGame;
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -17,7 +21,7 @@ public abstract class View implements ViewInterface {
 
     protected String displayMessage;
     
-    protected final BufferReader keyboard = EscapeGame.getInFile();
+    protected final BufferedReader keyboard = EscapeGame.getInFile();
     protected final PrintWriter console = EscapeGame.getOutFile();
 
     public View() {
@@ -55,10 +59,14 @@ public abstract class View implements ViewInterface {
         while (!valid) {
 
             //prompt for the player's name
-            this.console.println("\n" + this.message);
+            this.console.println("\n" + this.displayMessage);
 
-            //get the value entered from the keyboard
-            value = keyboard.readLine();
+            try {
+                //get the value entered from the keyboard
+                value = keyboard.readLine();
+            } catch (IOException ex) {
+                //TODO error handling
+            }
             value = value.trim();
 
             if (value.length() < 1) {//blank value entered

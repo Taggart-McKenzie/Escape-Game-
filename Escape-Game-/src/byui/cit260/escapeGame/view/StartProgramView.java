@@ -7,13 +7,20 @@ package byui.cit260.escapeGame.view;
 
 import byui.cit260.escapeGame.control.GameControl;
 import byui.cit260.escapeGame.model.Player;
+import escape.game.EscapeGame;
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Brown and Groesbeck
  */
 public class StartProgramView {
+    
+    protected final BufferedReader keyboard = EscapeGame.getInFile();
 
     private String promptMessage;
 
@@ -74,7 +81,11 @@ public class StartProgramView {
         while (!valid) {//loop while an invalid value is enter
             System.out.println("\n" + this.promptMessage);
 
-            value = keyboard.readLine(); //get next line typed on keyboard
+            try {
+                value = keyboard.readLine(); //get next line typed on keyboard
+            } catch (IOException ex) {
+                
+            }
             value = value.trim(); //trim off leading and trailing blanks
 
             if (value.length() < 1) { //value is blank
