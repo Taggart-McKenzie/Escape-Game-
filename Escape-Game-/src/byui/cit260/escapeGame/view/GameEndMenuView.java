@@ -5,13 +5,16 @@
  */
 package byui.cit260.escapeGame.view;
 
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author mckenzietaggart
  */
-public class GameEndMenuView {
+public class GameEndMenuView extends View{
 
     private String endMenu;
 
@@ -51,7 +54,11 @@ public class GameEndMenuView {
         while (!valid) {//loop while an invalid value is entered
             System.out.println("\n" + this.endMenu);
 
-            value = keyboard.readLine(); //get next lin typed on keyboard
+            try {
+                value = keyboard.readLine(); //get next lin typed on keyboard
+            } catch (IOException ex) {
+                Logger.getLogger(GameEndMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
             value = value.trim(); //trim off leading and trailing blanks
 
             if (value.length() < 1) { //value is blank
@@ -65,7 +72,7 @@ public class GameEndMenuView {
         return value; //return the value entered
     }
 
-    private boolean doAction(String choice) {
+    public boolean doAction(String choice) {
 
         choice = choice.toUpperCase(); //convert choice to upper case
 

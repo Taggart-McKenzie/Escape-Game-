@@ -18,7 +18,7 @@ import java.util.logging.Logger;
  *
  * @author Brown and Groesbeck
  */
-public class StartProgramView {
+public class StartProgramView extends View{
     
     protected final BufferedReader keyboard = EscapeGame.getInFile();
 
@@ -99,7 +99,7 @@ public class StartProgramView {
         return value; //return the value entered
     }
 
-    private boolean doAction(String playersName) {
+    public boolean doAction(String playersName) {
 
         if (playersName.length() < 2) {
             System.out.println("\nInvalid players name; "
