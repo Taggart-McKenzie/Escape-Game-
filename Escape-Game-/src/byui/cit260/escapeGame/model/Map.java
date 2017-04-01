@@ -123,8 +123,8 @@ public class Map implements Serializable {
         //TODO Add more locations to the map so all 25 map positions are filled
     }
 
-    public Location getLocationAt(int row, int col) {
-        return locations[row][col];
+    public Location getLocationAt(int rows, int cols) {
+        return locations[rows][cols];
     }
 
     public int getNumRows() {
