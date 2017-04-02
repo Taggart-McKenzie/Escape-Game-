@@ -17,7 +17,7 @@ public class ErrorView  {
     private static final PrintWriter errorFile = EscapeGame.getOutFile();
     private static final PrintWriter logFile = EscapeGame.getLogFile();
     
-    private static void display(String className, String errorMessage) {
+    static void display(String className, String errorMessage) {
         
         errorFile.println(
                     "---------------------------------------------"
@@ -25,5 +25,9 @@ public class ErrorView  {
                    +"\n-------------------------------------------");
     //log error
     logFile.println(className + "_" + errorMessage);
+    }
+
+    static void display(String mainMenuView, Exception ex) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

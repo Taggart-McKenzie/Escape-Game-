@@ -61,8 +61,17 @@ public class MainMenuView extends View {
 
     private void saveGame() {
         this.console.println("*** saveGame function called***");
+        
+        String filePath = this.getInput();
+        
+        try {
+            //save the game to the specified file
+            GameControl.saveGame(EscapeGame.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display ("MainMenuView", ex.getMessage());
+        }        
     }
-
+    
     private void newGame() {
         //create a new game
         GameControl.createNewGame(EscapeGame.getPlayer());
@@ -74,6 +83,18 @@ public class MainMenuView extends View {
 
     private void loadSavedGame() {
         this.console.println("*** loadSavedGame function called ***");
+        
+        String filePath = this.getInput();
+        
+        try {
+            //start a saved game
+            GameControl.getSavedGame(filePath);
+        } catch (Exception ex ){
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        //display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void gameEndControl() {
