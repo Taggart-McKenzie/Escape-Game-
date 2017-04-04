@@ -57,12 +57,12 @@ public class GameControl {
         Item cof= new Item();
         cof.setItemType(ItemType.Coffin);
         cof.setDescription("It appears to be a coffin");
-        map.getLocationAt(4, 5).setItem(cof);
+        map.getLocationAt(4, 4).setItem(cof);
         
         Item key= new Item();
         key.setItemType(ItemType.Keys);
         key.setDescription("It appears to be a set of keys");
-        map.getLocationAt(2, 5).setItem(key);
+        map.getLocationAt(2, 4).setItem(key);
         
         Item boo= new Item();
         boo.setItemType(ItemType.Book);
