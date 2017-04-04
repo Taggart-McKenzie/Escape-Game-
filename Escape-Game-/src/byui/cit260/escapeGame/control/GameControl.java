@@ -47,7 +47,7 @@ public class GameControl {
         sti.setItemType(ItemType.Stick);
         sti.setDescription("It's just a boring stick");
         //Get a location in the map and set the item to the new item we created
-        map.getLocationAt(3, 5).setItem(sti);
+        map.getLocationAt(3, 4).setItem(sti);
         
         Item bow = new Item();
         bow.setItemType(ItemType.Bowl);
